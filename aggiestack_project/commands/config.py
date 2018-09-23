@@ -9,6 +9,7 @@ Created on Sep 22, 2018
 from json import dumps
 
 from .base import Base
+from json import dumps
 
 import aggiestack_project.utility.def_hardware as def_hardware
 import os.path

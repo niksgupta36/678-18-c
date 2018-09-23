@@ -47,8 +47,8 @@ def main():
     # with a pre-defined command class we've already created.
   
               
-    for k, v in options.items():
-        if hasattr(aggiestack_project.commands, k):
+    for (k, v) in options.items():
+        if hasattr(aggiestack_project.commands, k) and v:
             module = getattr(aggiestack_project.commands, k)
             aggiestack_project.commands = getmembers(module, isclass)
             command = [command[1] for command in aggiestack_project.commands if command[0] != 'Base'][0]
