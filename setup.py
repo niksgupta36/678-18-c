@@ -1,10 +1,10 @@
 from setuptools import setup
 setup(
-    name = '678-18-c',
+    name = 'aggiestack',
     version = '0.1.0',
-    packages = ['aggiestack'],
+    packages = ['aggiestack_project'],
     entry_points = {
         'console_scripts': [
-            '678-18-c = aggiestack.__main__:main'
+            'aggiestack = aggiestack_project.__main__:main'
         ]
     })
