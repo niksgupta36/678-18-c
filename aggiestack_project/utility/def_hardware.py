@@ -12,9 +12,9 @@ import aggiestack_project.utility.database_crud as db_crud
 
 def loadHardwareList(hardwareListPath):
     print(hardwareListPath)
-    rackListPath, machineListPath = splitFile(hardwareListPath)
-    db_crud.loadList(rackListPath,["rack_name","space"],'rack_collection')
-    db_crud.loadList(machineListPath,["hardware_name","rack_name","ip","RAM","numDisks","numVcpus"],'machine_collection')
+   # rackListPath, machineListPath = splitFile(hardwareListPath)
+    #db_crud.loadList(rackListPath,["rack_name","space"],'rack_collection')
+    db_crud.loadList(hardwareListPath,["hardware_name","ip","RAM","numDisks","numVcpus"],'machine_collection')
 
 def getHardwareList():
     print ("These are the machines configured on the server")

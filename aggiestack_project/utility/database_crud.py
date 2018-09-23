@@ -39,8 +39,9 @@ def getList(collection_name,display = True):
 def loadList(listPath,paramsList,collection_name, append=False ):
     db = db_connect.connectMongo()
     collection = db[collection_name]
-    if not append:
-        db_connect(collection_name)
+    print(collection)
+#     if not append:
+#         db_connect(collection_name)
     if(os.path.isfile(listPath)):
         with open(listPath, "r") as fp:
             for i, line in enumerate(fp):
@@ -52,12 +53,13 @@ def loadList(listPath,paramsList,collection_name, append=False ):
                     for i in range (len(paramsList)):
                         post[paramsList[i]] = params[i]
                     post_id = collection.insert_one(post).inserted_id
+                    print(post_id)
 
             logStr = 'Successfully added new configurations to the' +  collection_name + ' collection'
-           # logger.log( logStr )
+            print( logStr )
 
-    #else:
-      #  logger.log('Invalid path, doing nothing', True)
+    else:
+        print('Invalid path, doing nothing', True)
    
 
 

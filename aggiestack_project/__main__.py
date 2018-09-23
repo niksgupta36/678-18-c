@@ -10,10 +10,10 @@ Usage:
    aggiestack show flavors
    aggiestack show all
    aggiestack admin show hardware
-   aggiestack admin can_host <machine name><flavor>
+   aggiestack admin can_host <machinename><flavor>
 
 Options:
-    <filename>          Optional file name argument.
+    <filename>          File name argument.
     <machinename>       Physical server argument.
     <flavor>             Virtual server type.
     --hardware           File describing the hardware hosting the cloud.
