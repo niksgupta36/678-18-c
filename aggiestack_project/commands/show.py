@@ -19,8 +19,8 @@ class Show(Base):
             def_flavor.getFlavorList()
         elif(self.options['hardware']):
             def_hardware.getHardwareList()
-        elif(self.options['logs']):
-            logger.getLogs()
+#         elif(self.options['logs']):
+#             logger.getLogs()
 #         elif(self.options['instances'] and self.options['show']):
 #             instance_utils.getInstanceList()
 #         elif(self.options['hardware'] and self.options['show']):
