@@ -27,6 +27,10 @@ class Config(Base):
             flavor_list_path =  self.options['--flavors']
             #flavor_utils.loadFlavorList(flavor_list_path)
         elif(self.options['--hardware']):
+            print("hardware***")
+           
             hardware_list_path =  self.options['--hardware']
+            
+            print(self.args)
             def_hardware.loadHardwareList(hardware_list_path)
         

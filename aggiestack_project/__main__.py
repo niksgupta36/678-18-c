@@ -2,9 +2,9 @@
 aggiestack
 
 Usage:
-   aggiestack config --hardware <file name>
-   aggiestack config --images <file name>
-   aggiestack config --flavors <file name>
+   aggiestack config --hardware <filename>
+   aggiestack config --images <filename>
+   aggiestack config --flavors <filename>
    aggiestack show hardware
    aggiestack show images
    aggiestack show flavors
@@ -13,8 +13,8 @@ Usage:
    aggiestack admin can_host <machine name><flavor>
 
 Options:
-    <file name>          Optional file name argument.
-    <machine name>       Physical server argument.
+    <filename>          Optional file name argument.
+    <machinename>       Physical server argument.
     <flavor>             Virtual server type.
     --hardware           File describing the hardware hosting the cloud.
     --images             File describing the images hosting the cloud.
