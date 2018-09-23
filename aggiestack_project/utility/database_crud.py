@@ -2,10 +2,11 @@
 import aggiestack_project.utility.database_connection as db_connect
 from bson.objectid import ObjectId
 import pprint as pp
-
+from aggiestack_project.commands import show
 
 
 import os
+from builtins import str
 
 
 def search(key,value,list):
@@ -18,6 +19,8 @@ def searchIndex(key,value,list):
     return index
 
 def getList(collection_name,display = True):
+    outfile = open("aggiestack-log.txt", "a+")
+    
     db = db_connect.connectMongo()
     collection = db[collection_name]
     message = collection.find()
@@ -26,8 +29,16 @@ def getList(collection_name,display = True):
         if display:
             for the_key, the_value in data.items():
                 if not isinstance(the_value,(list,)):            ## most preferred way to check if it's list
-                    print (the_key, ' : ', the_value, " | ",)
-            print (datalist.append(data))    
+                    print (the_key, ' : ', the_value )
+                    outfile.write(the_key)
+                    outfile.write(' : ')
+                    temp = str(the_value) 
+                    outfile.write(temp)
+                    outfile.write('\n')
+        print ("\n")    
+    
+    
+    
     return datalist
 
 

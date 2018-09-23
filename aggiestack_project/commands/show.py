@@ -7,7 +7,8 @@ class Show(Base):
     """Say hello, world!"""
 
     def run(self):
-        print('show, world!')
+        outfile = open("aggiestack-log.txt", "a+")
+#         print('show, world!')
         #print(self.options)
         if(self.options['images']):
             def_image.getImageList()
@@ -28,7 +29,7 @@ class Show(Base):
             def_hardware.getHardwareList()
          
         else:
-            outfile = open("Logger.txt", "a+")
+            
             outfile.write('\n')
             outfile.write("Invalid parameter")
            
