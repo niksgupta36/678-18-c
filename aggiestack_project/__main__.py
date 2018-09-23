@@ -1,9 +1,51 @@
+"""
+aggiestack
 
+Usage:
+   aggiestack config --hardware <file name>
+   aggiestack config --images <file name>
+   aggiestack config --flavors <file name>
+   aggiestack show hardware
+   aggiestack show images
+   aggiestack show flavors
+   aggiestack show all
+   aggiestack admin show hardware
+   aggiestack admin can_host <machine name><flavor>
 
+Options:
+    <file name>          Optional file name argument.
+    <machine name>       Physical server argument.
+    <flavor>             Virtual server type.
+    --hardware           File describing the hardware hosting the cloud.
+    --images             File describing the images hosting the cloud.
+    --flavors            File describing the flavor hosting the cloud.
+
+Examples:
+  aggiestack admin show hardware
+
+Help:
+  For help using this tool, please open an issue on the Github repository:
+
+"""
+
+from inspect import getmembers, isclass
+ 
+from docopt import docopt
+ 
+from . import __version__ as VERSION
+ 
 def main():
-   
-    print("hii")
-   
-if __name__ == '__main__':
-    main()
-    
+    """Main CLI entrypoint."""
+    import aggiestack_project.commands
+    options = docopt(__doc__, version=VERSION)
+    print(options)
+ 
+    # Here we'll try to dynamically match the command the user is trying to run
+    # with a pre-defined command class we've already created.
+    for k, v in options.iteritems():
+        if hasattr(aggiestack_project.commands, k):
+            module = getattr(aggiestack_project.commands, k)
+            aggiestack_project.commands = getmembers(module, isclass)
+            command = [command[1] for command in aggiestack_project.commands if command[0] != 'Base'][0]
+            command = command(options)
+            command.run()
