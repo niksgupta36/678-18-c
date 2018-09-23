@@ -10,7 +10,7 @@ def loadHardwareList(hardwareListPath):
     print(hardwareListPath)
    # rackListPath, machineListPath = splitFile(hardwareListPath)
     #db_crud.loadList(rackListPath,["rack_name","space"],'rack_collection')
-    db_crud.loadList(hardwareListPath,["hardware_name","ip","RAM","numDisks","numVcpus"],'machine_collection')
+    db_crud.loadList(hardwareListPath,["hardware_name","ip","RAM","numDisks","numVcpus"],'machine_collection','hardware_name')
 
 def getHardwareList():
     print ("These are the machines configured on the server")

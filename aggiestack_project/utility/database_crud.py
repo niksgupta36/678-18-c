@@ -31,7 +31,7 @@ def getList(collection_name,display = True):
     return datalist
 
 
-def loadList(listPath,paramsList,collection_name, append=False ):
+def loadList(listPath,paramsList,collection_name,key,append=False ):
     db = db_connect.connectMongo()
     collection = db[collection_name]
     count=0
@@ -54,15 +54,15 @@ def loadList(listPath,paramsList,collection_name, append=False ):
                         #print(params[i])
                         #args=params[i]
                     #print(params[0])
-                    if(collection.find({"hardware_name"  : params[0]}).count()):
-                        collection.remove({"hardware_name": params[0]})
-                        logStr = 'Deleting previous duplicate entry for machine name: ' +  params[0] 
+                    if(collection.find({key  : params[0]}).count()):
+                        collection.remove({key: params[0]})
+                        logStr = 'Deleting previous duplicate entry for ' +key+' : '+  params[0] 
                         print( logStr )    
                     post_id = collection.insert_one(post).inserted_id
                    
                     #print(post_id)
 
-            logStr = 'Successfully added '+str(count)+' new hardware configurations to the ' +  collection_name + ' collection'
+            logStr = 'Successfully added '+str(count)+' new configurations to the ' +  collection_name + ' collection'
             print( logStr )
 
     else:
