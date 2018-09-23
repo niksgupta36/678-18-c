@@ -27,23 +27,27 @@ Help:
   For help using this tool, please open an issue on the Github repository:
 
 """
-
+import sys
 from inspect import getmembers, isclass
- 
+import aggiestack_project.commands
 from docopt import docopt
- 
+
 from . import __version__ as VERSION
  
 def main():
    
     """Main CLI entrypoint."""
-    import aggiestack_project.commands
+#     from commands import Config
+   
+  
     options = docopt(__doc__, version=VERSION)
     print(options)
      
     # Here we'll try to dynamically match the command the user is trying to run
     # with a pre-defined command class we've already created.
-    for k, v in options.iteritems():
+  
+              
+    for k, v in options.items():
         if hasattr(aggiestack_project.commands, k):
             module = getattr(aggiestack_project.commands, k)
             aggiestack_project.commands = getmembers(module, isclass)
