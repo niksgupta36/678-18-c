@@ -1,14 +1,9 @@
-'''
-Created on Sep 22, 2018
-
-@author: sharm
-'''
 
 import aggiestack_project.utility.database_connection as db_connect
 from bson.objectid import ObjectId
 import pprint as pp
 
-#import logger
+
 
 import os
 
