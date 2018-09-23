@@ -29,7 +29,7 @@ def getList(collection_name,display = True):
     datalist = []
     for data in message:
         if display:
-            for the_key, the_value in data.iteritems():
+            for the_key, the_value in data.items():
                 if not isinstance(the_value,(list,)):            ## most preferred way to check if it's list
                     print (the_key, ' : ', the_value, " | ",)
             print (datalist.append(data))    
