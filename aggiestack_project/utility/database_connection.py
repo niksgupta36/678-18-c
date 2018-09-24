@@ -1,7 +1,6 @@
 
 import pymongo
-import json
-import os
+
 
 
 def connectMongo():

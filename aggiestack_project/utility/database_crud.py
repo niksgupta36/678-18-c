@@ -1,23 +1,13 @@
 
 import aggiestack_project.utility.database_connection as db_connect
-from bson.objectid import ObjectId
-import pprint as pp
-from aggiestack_project.commands import show
+
 
 
 import os
 from builtins import str
-from warnings import catch_warnings
 
 
-def search(key,value,list):
-    return [element for element in list if element[key] == value]
 
-def searchIndex(key,value,list):
-    index = -1
-    elementList = [element for element in list if element[key] == value]
-    index = list.index(elementList[0])
-    return index
 
 def getList(collection_name, paramsList, display = True):
     outfile = open("aggiestack-log.txt", "a+")
@@ -59,7 +49,7 @@ def getList(collection_name, paramsList, display = True):
     
 
 
-def loadList(listPath,paramsList,collection_name,key, offset,append=False ):
+def loadList(listPath,paramsList,collection_name,key, offset):
     try:
         outfile = open("aggiestack-log.txt", "a+")
         outfile.write('\n')
@@ -85,8 +75,8 @@ def loadList(listPath,paramsList,collection_name,key, offset,append=False ):
                             post[paramsList[i]] = params[i]
                             if key == 'hardware_name':
                                     post[paramsList[5]] = params[2] # for current RAM= Original RAM when loading
-                                    post[paramsList[6]] = params[3] # for current RAM= Original RAM when loading
-                                    post[paramsList[7]] = params[4] # for current RAM= Original RAM when loading
+                                    post[paramsList[6]] = params[3] # for current numDisks= Original numDisks when loading
+                                    post[paramsList[7]] = params[4] # for current VirtualCpu= Original VirtualCpu when loading
 
                         
                         #print(params[i])
@@ -103,7 +93,7 @@ def loadList(listPath,paramsList,collection_name,key, offset,append=False ):
                    
                     #print(post_id)
 
-                logStr = 'Successfully added '+str(count)+' new configurations to the ' +  collection_name + ' collection'
+                logStr = 'Success!! Added '+str(count)+' new configurations to the collection : ' +  collection_name 
                 print( logStr )
                 outfile.write(str(logStr))
                 outfile.write('\n')
@@ -126,7 +116,7 @@ def loadList(listPath,paramsList,collection_name,key, offset,append=False ):
         outfile.write('Status : FAILURE')
 
    
-def getItem(key,value,collection_name,no_error = False):
+def getItem(key,value,collection_name):
     db = db_connect.connectMongo()
     collection = db[collection_name]
     if(collection.find({key  : value}).count()):

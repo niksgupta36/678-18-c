@@ -38,8 +38,7 @@ from _ast import arg
  
 def main():
    
-    """Main CLI entrypoint."""
-#     from commands import Config
+    
     outfile = open("aggiestack-log.txt", "a+")
     outfile.write('\n')
     
@@ -56,10 +55,7 @@ def main():
     options = docopt(__doc__, version=VERSION)
 #     print(options)
      
-    # Here we'll try to dynamically match the command the user is trying to run
-    # with a pre-defined command class we've already created.
-#     for (k, v) in options.items():
-#         if(v):
+  
     
     
     for (k, v) in options.items():

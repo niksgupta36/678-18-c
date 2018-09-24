@@ -1,10 +1,5 @@
-'''
-Created on Sep 23, 2018
 
-@author: sharm
-'''
-import aggiestack_project.utility.database_connection
-import os.path
+
 #import logger
 
 import aggiestack_project.utility.database_crud as db_crud

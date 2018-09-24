@@ -1,16 +1,13 @@
 
-import aggiestack_project.utility.database_connection
-import os.path
-#import logger
+
 
 import aggiestack_project.utility.database_crud as db_crud
 from aggiestack_project.utility import def_flavor
-#import flavor_utils
+
 
 def loadHardwareList(hardwareListPath):
 #     print(hardwareListPath)
-   # rackListPath, machineListPath = splitFile(hardwareListPath)
-    #db_crud.loadList(rackListPath,["rack_name","space"],'rack_collection')
+  
     db_crud.loadList(hardwareListPath,["hardware_name","ip","Original RAM","Original numDisks","Original numVcpus", "Current RAM", "Current numDisks", "Current numVcpus"],'machine_collection','hardware_name',3)
 
 def getHardware(machine_name):
