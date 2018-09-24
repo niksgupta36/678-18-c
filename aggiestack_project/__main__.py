@@ -6,11 +6,12 @@ Usage:
    aggiestack config --images <filename>
    aggiestack config --flavors <filename>
    aggiestack admin show hardware
+   aggiestack admin can_host <machinename> <flavor>
    aggiestack show hardware
    aggiestack show images
    aggiestack show flavors
    aggiestack show all
-   aggiestack admin can_host <machinename><flavor>
+   
 
 Options:
     <filename>          File name argument.

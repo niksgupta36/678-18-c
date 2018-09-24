@@ -18,18 +18,19 @@ class Admin(Base):
 
     def run(self):
         print('admin, world!')
-        print(self.options)
+        #print(self.options)
         #print('You supplied the following options:', dumps(self.options, indent=2, sort_keys=True))
 
        
                 
         if (self.options['show'] & self.options['hardware'] ):
-            def_hardware.getHardwareList()  
+            def_hardware.getAdminHardwareList()  
 
         
     
         elif (self.options['can_host']):
             print('can_host called')
-            #def_hardware.isHardwareAvailable(self.options['<MACHINE_NAME>'],self.options['<FLAVOR>'])
+            result=def_hardware.isHardwareAvailable(self.options['<machinename>'],self.options['<flavor>'])
+            print(result)
 
         
