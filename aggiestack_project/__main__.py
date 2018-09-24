@@ -38,7 +38,7 @@ from _ast import arg
  
 def main():
    
-    
+    #print("helo")
     outfile = open("aggiestack-log.txt", "a+")
     outfile.write('\n')
     
@@ -53,7 +53,7 @@ def main():
     outfile.write('\n')
     outfile.write('####################################################################')
     options = docopt(__doc__, version=VERSION)
-#     print(options)
+    #print(options)
      
   
     
