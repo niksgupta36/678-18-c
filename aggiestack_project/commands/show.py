@@ -29,7 +29,7 @@ class Show(Base):
             def_hardware.getHardwareList()
          
         else:
-            
+            outfile.write('Status : FAILURE')
             outfile.write('\n')
             outfile.write("Invalid parameter")
            
