@@ -13,5 +13,5 @@ def loadImageList(imageListPath):
     db_crud.loadList(imageListPath,["image_name","path"],'image_collection', 'image_name')
 
 def getImageList():
-    print ("These are the images configured on the server")
+#     print ("These are the images configured on the server")
     db_crud.getList('image_collection')  

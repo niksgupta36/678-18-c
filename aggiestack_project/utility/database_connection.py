@@ -14,6 +14,7 @@ def connectMongo():
     db = client.test
     outfile = open("aggiestack-log.txt", "a+")
     outfile.write('\n')
-    outfile.write(str(db))
-    
+    outfile.write('Connection to database is successful!')
+    outfile.write('\n')
+    outfile.write('\n')
     return db

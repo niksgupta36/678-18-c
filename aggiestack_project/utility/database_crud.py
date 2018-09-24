@@ -7,6 +7,7 @@ from aggiestack_project.commands import show
 
 import os
 from builtins import str
+from warnings import catch_warnings
 
 
 def search(key,value,list):
@@ -24,11 +25,12 @@ def getList(collection_name,display = True):
     db = db_connect.connectMongo()
     collection = db[collection_name]
     message = collection.find()
-    datalist = []
+    count=0
     for data in message:
         if display:
             for the_key, the_value in data.items():
-                if not isinstance(the_value,(list,)):            ## most preferred way to check if it's list
+                if not isinstance(the_value,(list,)): 
+                    count+=1           ## most preferred way to check if it's list
                     print (the_key, ' : ', the_value )
                     outfile.write(the_key)
                     outfile.write(' : ')
@@ -38,63 +40,81 @@ def getList(collection_name,display = True):
                     
         print ("\n")
     outfile.write('\n')
+#     if (collection is 'flavor_collection'):
+#         
+#         (count) = int(count/5)
+#     elif(collection is 'image_collection'):
+#         (count) = int(count/3)
+#     else:
+#         (count) = int(count/9)
+#     print('There are a total of '+str(count)+' entries.')
+    outfile.write('Status : SUCCESS')
     outfile.write('\n')        
     
     
     
-    return datalist
+    
 
 
 def loadList(listPath,paramsList,collection_name,key,append=False ):
-    outfile = open("aggiestack-log.txt", "a+")
-    outfile.write('\n')
-    outfile.write('\n')
-    db = db_connect.connectMongo()
-    collection = db[collection_name]
-    count=0
+    try:
+        outfile = open("aggiestack-log.txt", "a+")
+        outfile.write('\n')
+        outfile.write('\n')
+        db = db_connect.connectMongo()
+        collection = db[collection_name]
+        count=0
    # print(collection)
 #     if not append:
 #         db_connect(collection_name)
-    if(os.path.isfile(listPath)):
-        with open(listPath, "r") as fp:
-            for i, line in enumerate(fp):
-                if i == 0:
-                    continue
-                else:
-                    count+=1
-                    params = line.split()
-                    post = {}
-                    for i in range (len(paramsList)):
+        if(os.path.isfile(listPath)):
+            with open(listPath, "r") as fp:
+                for i, line in enumerate(fp):
+                    if i == 0:
+                        continue
+                    else:
+                        count+=1
+                        params = line.split()
+                        post = {}
+                        for i in range (len(paramsList)):
                        
-                        post[paramsList[i]] = params[i]
+                            post[paramsList[i]] = params[i]
                         
                         #print(params[i])
                         #args=params[i]
                     #print(params[0])
-                    if(collection.find({key  : params[0]}).count()):
-                        collection.remove({key: params[0]})
-                        logStr = 'Deleting previous duplicate entry for ' +key+' : '+  params[0] 
-                        print( logStr )   
-                        outfile.write(str(logStr))
-                        outfile.write('\n')
+                        if(collection.find({key  : params[0]}).count()):
+                            collection.remove({key: params[0]})
+                            logStr = 'Deleting previous duplicate entry for ' +key+' : '+  params[0] 
+                            print( logStr )   
+                            outfile.write(str(logStr))
+                            outfile.write('\n')
                          
-                    post_id = collection.insert_one(post).inserted_id
+                        post_id = collection.insert_one(post).inserted_id
                    
                     #print(post_id)
 
-            logStr = 'Successfully added '+str(count)+' new configurations to the ' +  collection_name + ' collection'
-            print( logStr )
-            outfile.write(str(logStr))
-            outfile.write('\n')
-            outfile.write('Status : SUCCESS')
+                logStr = 'Successfully added '+str(count)+' new configurations to the ' +  collection_name + ' collection'
+                print( logStr )
+                outfile.write(str(logStr))
+                outfile.write('\n')
+                outfile.write('Status : SUCCESS')
 
-    else:
-        print(listPath, ' -File not found (Invalid path)')
-        outfile.write(listPath)
-        outfile.write(' -File not found (Invalid path)')
+        else:
+            print(listPath, ' -File not found (Invalid path)')
+            outfile.write(listPath)
+            outfile.write(' -File not found (Invalid path)')
+            outfile.write('\n')
+            outfile.write('Status : FAILURE')
+    
+    except Exception as e:
+        print('Invalid content. One or more parameters not found. Please check the log file')
+        print(e)
+        outfile.write('One or more parameters not found')
+        outfile.write('\n')
+        outfile.write(str(e))
         outfile.write('\n')
         outfile.write('Status : FAILURE')
-   
 
 
 
