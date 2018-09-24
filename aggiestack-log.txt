@@ -781,3 +781,13 @@ Connection to database is successful!
 Yes
 Command: aggiestack  admin can_host m1 small
 ####################################################################
+Connection to database is successful!
+
+
+Connection to database is successful!
+
+
+
+yesStatus : SUCCESS
+Command: aggiestack  admin can_host m1 small
+####################################################################

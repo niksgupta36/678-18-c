@@ -30,6 +30,8 @@ class Admin(Base):
 #             print('can_host called')
             result=def_hardware.isHardwareAvailable(self.options['<machinename>'],self.options['<flavor>'])
             outfile.write(str(result))
+            outfile.write('\n')
+            outfile.write('Status : SUCCESS')
             print(result)
 
         
