@@ -15,6 +15,13 @@ class Show(Base):
             def_flavor.getFlavorList()
         elif(self.options['hardware']):
             def_hardware.getHardwareList()
+        elif(self.options['all']):
+            print('\nImages : \n')
+            def_image.getImageList()
+            print('\nFlavors : \n')
+            def_flavor.getFlavorList()
+            print('\nHardware: \n')
+            def_hardware.getHardwareList()    
 #         elif(self.options['admin']):
 #             print("admin in show")
 #             def_hardware.getHardwareList()    
