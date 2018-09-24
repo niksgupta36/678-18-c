@@ -1,4 +1,22 @@
-hardware_name : m1
+image_name : linux-ubuntu
+path : h
+image_name : linux-sles
+path : /images/old-image.img
+image_name : linux-ubuntu-16
+path : /images/linux-ubuntu-16.img
+
+Status : SUCCESS
+
+Command: aggiestack  show images
+####################################################################
+Status : SUCCESS
+
+Command: aggiestack  show images
+####################################################################
+Status : SUCCESS
+
+Command: aggiestack  show images
+####################################################################hardware_name : m1
 ip : 128.0.0.1
 Original RAM : 8
 Original numDisks : 8
@@ -52,4 +70,10 @@ Original numVcpus : 16
 Status : SUCCESS
 
 Command: aggiestack  show hardware
+####################################################################
+
+0 entries found
+Status : SUCCESS
+
+Command: aggiestack  show images
 ####################################################################
