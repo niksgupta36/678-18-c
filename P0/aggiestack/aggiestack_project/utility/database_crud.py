@@ -23,6 +23,7 @@ def getList(collection_name, paramsList, display = True):
 
                     for param in paramsList:
                         if param == the_key:
+                            count+=1
                             print (the_key, ' : ', the_value )
                             outfile.write(the_key)
                             outfile.write(' : ')
@@ -33,7 +34,11 @@ def getList(collection_name, paramsList, display = True):
                     
         print ("\n")
     outfile.write('\n')
-#     if (collection is 'flavor_collection'):
+    if (count is 0):
+        print('0 entries found')
+        outfile.write('\n')
+        outfile.write('0 entries found')
+        outfile.write('\n')
 #         
 #         (count) = int(count/5)
 #     elif(collection is 'image_collection'):
