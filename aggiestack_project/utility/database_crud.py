@@ -35,7 +35,10 @@ def getList(collection_name,display = True):
                     temp = str(the_value) 
                     outfile.write(temp)
                     outfile.write('\n')
-        print ("\n")    
+                    
+        print ("\n")
+    outfile.write('\n')
+    outfile.write('\n')        
     
     
     
@@ -43,6 +46,9 @@ def getList(collection_name,display = True):
 
 
 def loadList(listPath,paramsList,collection_name,key,append=False ):
+    outfile = open("aggiestack-log.txt", "a+")
+    outfile.write('\n')
+    outfile.write('\n')
     db = db_connect.connectMongo()
     collection = db[collection_name]
     count=0
@@ -68,16 +74,26 @@ def loadList(listPath,paramsList,collection_name,key,append=False ):
                     if(collection.find({key  : params[0]}).count()):
                         collection.remove({key: params[0]})
                         logStr = 'Deleting previous duplicate entry for ' +key+' : '+  params[0] 
-                        print( logStr )    
+                        print( logStr )   
+                        outfile.write(str(logStr))
+                        outfile.write('\n')
+                         
                     post_id = collection.insert_one(post).inserted_id
                    
                     #print(post_id)
 
             logStr = 'Successfully added '+str(count)+' new configurations to the ' +  collection_name + ' collection'
             print( logStr )
+            outfile.write(str(logStr))
+            outfile.write('\n')
+            outfile.write('Status : SUCCESS')
 
     else:
-        print('Invalid path, doing nothing', True)
+        print(listPath, ' -File not found (Invalid path)')
+        outfile.write(listPath)
+        outfile.write(' -File not found (Invalid path)')
+        outfile.write('\n')
+        outfile.write('Status : FAILURE')
    
 
 

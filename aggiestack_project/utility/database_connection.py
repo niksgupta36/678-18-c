@@ -12,6 +12,8 @@ def connectMongo():
     
     client = pymongo.MongoClient(url)
     db = client.test
-    print(db)
-   
+    outfile = open("aggiestack-log.txt", "a+")
+    outfile.write('\n')
+    outfile.write(str(db))
+    
     return db

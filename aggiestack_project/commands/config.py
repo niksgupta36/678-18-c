@@ -17,7 +17,7 @@ class Config(Base):
     """Say hello, world!"""
 
     def run(self):
-        print('config, world!')
+#         print('config, world!')
         #print(self.options)
         if(self.options['--images']):
             #image_list_path =  self.options['--images']
@@ -28,7 +28,7 @@ class Config(Base):
             flavor_list_path=(self.options['<filename>'])
             def_flavor.loadFlavorList(flavor_list_path)
         elif(self.options['--hardware']):
-            print("hardware***")
+#             print("hardware***")
             #hardware_list_path =  self.options['--hardware']
            # print(self.args)
             #print(self.kwargs)
