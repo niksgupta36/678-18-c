@@ -14,13 +14,13 @@ def getHardware(machine_name):
     return db_crud.getItem('hardware_name',machine_name,'machine_collection')
 
 def getHardwareList():
-    print ("These are the machines configured on the server")
+    print ("***** Hardware configured on the server *****")
     db_crud.getList('machine_collection',["hardware_name","ip","Original RAM","Original numDisks", "Original numVcpus"])
    
 def getAdminHardwareList():
-    print ("Current configuration of the machines")
+    print ("**** Current Hardware configured on the server ****")
     db_crud.getList('machine_collection',["hardware_name","ip","Original RAM","Original numDisks","Original numVcpus", "Current RAM", "Current numDisks", "Current numVcpus"])   
-
+ 
 def isHardwareAvailable(machine_name, flavor_name):
    
     machine = getHardware(machine_name)
