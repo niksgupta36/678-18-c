@@ -59,7 +59,7 @@ def getList(collection_name, paramsList, display = True):
     
 
 
-def loadList(listPath,paramsList,collection_name,key,append=False ):
+def loadList(listPath,paramsList,collection_name,key, offset,append=False ):
     try:
         outfile = open("aggiestack-log.txt", "a+")
         outfile.write('\n')
@@ -80,12 +80,13 @@ def loadList(listPath,paramsList,collection_name,key,append=False ):
                         count+=1
                         params = line.split()
                         post = {}
-                        for i in range (len(paramsList)-3):
+                        for i in range (len(paramsList)-offset):
                        
                             post[paramsList[i]] = params[i]
-                            post[paramsList[5]] = params[2] # for current RAM= Original RAM when loading
-                            post[paramsList[6]] = params[3] # for current RAM= Original RAM when loading
-                            post[paramsList[7]] = params[4] # for current RAM= Original RAM when loading
+                            if key == 'hardware_name':
+                                    post[paramsList[5]] = params[2] # for current RAM= Original RAM when loading
+                                    post[paramsList[6]] = params[3] # for current RAM= Original RAM when loading
+                                    post[paramsList[7]] = params[4] # for current RAM= Original RAM when loading
 
                         
                         #print(params[i])

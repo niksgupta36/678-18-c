@@ -11,7 +11,7 @@ def loadHardwareList(hardwareListPath):
     print(hardwareListPath)
    # rackListPath, machineListPath = splitFile(hardwareListPath)
     #db_crud.loadList(rackListPath,["rack_name","space"],'rack_collection')
-    db_crud.loadList(hardwareListPath,["hardware_name","ip","Original RAM","Original numDisks","Original numVcpus", "Current RAM", "Current numDisks", "Current numVcpus"],'machine_collection','hardware_name')
+    db_crud.loadList(hardwareListPath,["hardware_name","ip","Original RAM","Original numDisks","Original numVcpus", "Current RAM", "Current numDisks", "Current numVcpus"],'machine_collection','hardware_name',3)
 
 def getHardware(machine_name):
     return db_crud.getItem('hardware_name',machine_name,'machine_collection')
