@@ -8,7 +8,7 @@ class Show(Base):
 
     def run(self):
         outfile = open("aggiestack-log.txt", "a+")
-#         print('show, world!')
+        print('show, world!')
         #print(self.options)
         if(self.options['images']):
             def_image.getImageList()
@@ -16,6 +16,9 @@ class Show(Base):
             def_flavor.getFlavorList()
         elif(self.options['hardware']):
             def_hardware.getHardwareList()
+        elif(self.options['admin']):
+            print("admin in show")
+            def_hardware.getHardwareList()    
 #         elif(self.options['instances'] and self.options['show']):
 #             instance_utils.getInstanceList()
 #         elif(self.options['hardware'] and self.options['show']):

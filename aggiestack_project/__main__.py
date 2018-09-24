@@ -5,11 +5,11 @@ Usage:
    aggiestack config --hardware <filename>
    aggiestack config --images <filename>
    aggiestack config --flavors <filename>
+   aggiestack admin show hardware
    aggiestack show hardware
    aggiestack show images
    aggiestack show flavors
    aggiestack show all
-   aggiestack admin show hardware
    aggiestack admin can_host <machinename><flavor>
 
 Options:
@@ -41,7 +41,7 @@ def main():
    
   
     options = docopt(__doc__, version=VERSION)
-#     print(options)
+    print(options)
      
     # Here we'll try to dynamically match the command the user is trying to run
     # with a pre-defined command class we've already created.
