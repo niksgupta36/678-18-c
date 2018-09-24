@@ -8,7 +8,7 @@ from aggiestack_project.utility import def_flavor
 #import flavor_utils
 
 def loadHardwareList(hardwareListPath):
-    print(hardwareListPath)
+#     print(hardwareListPath)
    # rackListPath, machineListPath = splitFile(hardwareListPath)
     #db_crud.loadList(rackListPath,["rack_name","space"],'rack_collection')
     db_crud.loadList(hardwareListPath,["hardware_name","ip","Original RAM","Original numDisks","Original numVcpus", "Current RAM", "Current numDisks", "Current numVcpus"],'machine_collection','hardware_name',3)
@@ -33,7 +33,7 @@ def isHardwareAvailable(machine_name, flavor_name):
        int(machine['Current numVcpus'])>=int(flavor['numVcpus']) ):
         #logger.log('Can host instance')
        
-        return "Yes"
+        return "yes"
     else:
         #logger.log('Cannot host instance')
-        return "No"
+        return "no"

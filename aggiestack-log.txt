@@ -581,3 +581,203 @@ list index out of range
 Status : FAILURE
 Command: aggiestack  config --hardware hardware-config
 ####################################################################
+Connection to database is successful!
+
+hardware_name : m1
+Current RAM : 16
+Current numDisks : 8
+Current numVcpus : 4
+ip : 128.0.0.1
+Original RAM : 16
+Original numDisks : 8
+Original numVcpus : 4
+hardware_name : m2
+Current RAM : 16
+Current numDisks : 32
+Current numVcpus : 4
+ip : 128.0.0.2
+Original RAM : 16
+Original numDisks : 32
+Original numVcpus : 4
+hardware_name : m3
+Current RAM : 16
+Current numDisks : 16
+Current numVcpus : 4
+ip : 128.0.0.3
+Original RAM : 16
+Original numDisks : 16
+Original numVcpus : 4
+hardware_name : m4
+Current RAM : 16
+Current numDisks : 8
+Current numVcpus : 4
+ip : 128.0.0.4
+Original RAM : 16
+Original numDisks : 8
+Original numVcpus : 4
+hardware_name : k1
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.1.0.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : k2
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.0.2.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : k3
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.3.0.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : calvin
+Current RAM : 8
+Current numDisks : 16
+Current numVcpus : 1
+ip : 128.129.4.4
+Original RAM : 8
+Original numDisks : 16
+Original numVcpus : 1
+hardware_name : hobbes
+Current RAM : 16
+Current numDisks : 64
+Current numVcpus : 16
+ip : 1.1.1.1
+Original RAM : 16
+Original numDisks : 64
+Original numVcpus : 16
+hardware_name : dora
+Current RAM : 64
+Current numDisks : 256
+Current numVcpus : 16
+ip : 1.1.1.2
+Original RAM : 64
+Original numDisks : 256
+Original numVcpus : 16
+
+Status : SUCCESS
+
+Command: aggiestack  admin show hardware
+####################################################################
+Connection to database is successful!
+
+
+
+dfljb -File not found (Invalid path)
+Status : FAILURE
+Command: aggiestack  config --hardware dfljb
+####################################################################
+Connection to database is successful!
+
+hardware_name : m1
+Current RAM : 16
+Current numDisks : 8
+Current numVcpus : 4
+ip : 128.0.0.1
+Original RAM : 16
+Original numDisks : 8
+Original numVcpus : 4
+hardware_name : m2
+Current RAM : 16
+Current numDisks : 32
+Current numVcpus : 4
+ip : 128.0.0.2
+Original RAM : 16
+Original numDisks : 32
+Original numVcpus : 4
+hardware_name : m3
+Current RAM : 16
+Current numDisks : 16
+Current numVcpus : 4
+ip : 128.0.0.3
+Original RAM : 16
+Original numDisks : 16
+Original numVcpus : 4
+hardware_name : m4
+Current RAM : 16
+Current numDisks : 8
+Current numVcpus : 4
+ip : 128.0.0.4
+Original RAM : 16
+Original numDisks : 8
+Original numVcpus : 4
+hardware_name : k1
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.1.0.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : k2
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.0.2.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : k3
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.3.0.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : calvin
+Current RAM : 8
+Current numDisks : 16
+Current numVcpus : 1
+ip : 128.129.4.4
+Original RAM : 8
+Original numDisks : 16
+Original numVcpus : 1
+hardware_name : hobbes
+Current RAM : 16
+Current numDisks : 64
+Current numVcpus : 16
+ip : 1.1.1.1
+Original RAM : 16
+Original numDisks : 64
+Original numVcpus : 16
+hardware_name : dora
+Current RAM : 64
+Current numDisks : 256
+Current numVcpus : 16
+ip : 1.1.1.2
+Original RAM : 64
+Original numDisks : 256
+Original numVcpus : 16
+
+Status : SUCCESS
+
+Command: aggiestack  admin show hardware
+####################################################################
+Connection to database is successful!
+
+
+Connection to database is successful!
+
+
+Command: aggiestack  admin can_host m1 small
+####################################################################
+Connection to database is successful!
+
+
+Connection to database is successful!
+
+
+
+Yes
+Command: aggiestack  admin can_host m1 small
+####################################################################

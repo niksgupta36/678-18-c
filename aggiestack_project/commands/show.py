@@ -8,7 +8,7 @@ class Show(Base):
 
     def run(self):
         outfile = open("aggiestack-log.txt", "a+")
-        print('show, world!')
+#         print('show, world!')
         #print(self.options)
         if(self.options['images']):
             def_image.getImageList()

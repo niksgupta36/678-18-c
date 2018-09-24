@@ -1,8 +1,4 @@
-'''
-Created on Sep 22, 2018
 
-@author: sharm
-'''
 """The base command."""
 
 class Base(object):
