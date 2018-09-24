@@ -19,7 +19,7 @@ def searchIndex(key,value,list):
     index = list.index(elementList[0])
     return index
 
-def getList(collection_name,display = True):
+def getList(collection_name, paramsList, display = True):
     outfile = open("aggiestack-log.txt", "a+")
     
     db = db_connect.connectMongo()
@@ -30,13 +30,16 @@ def getList(collection_name,display = True):
         if display:
             for the_key, the_value in data.items():
                 if not isinstance(the_value,(list,)): 
-                    count+=1           ## most preferred way to check if it's list
-                    print (the_key, ' : ', the_value )
-                    outfile.write(the_key)
-                    outfile.write(' : ')
-                    temp = str(the_value) 
-                    outfile.write(temp)
-                    outfile.write('\n')
+
+                    for param in paramsList:
+                        if param == the_key:
+                            print (the_key, ' : ', the_value )
+                            outfile.write(the_key)
+                            outfile.write(' : ')
+                            temp = str(the_value) 
+                            outfile.write(temp)
+                            outfile.write('\n')
+
                     
         print ("\n")
     outfile.write('\n')
@@ -67,6 +70,7 @@ def loadList(listPath,paramsList,collection_name,key,append=False ):
    # print(collection)
 #     if not append:
 #         db_connect(collection_name)
+
         if(os.path.isfile(listPath)):
             with open(listPath, "r") as fp:
                 for i, line in enumerate(fp):
@@ -76,9 +80,13 @@ def loadList(listPath,paramsList,collection_name,key,append=False ):
                         count+=1
                         params = line.split()
                         post = {}
-                        for i in range (len(paramsList)):
+                        for i in range (len(paramsList)-3):
                        
                             post[paramsList[i]] = params[i]
+                            post[paramsList[5]] = params[2] # for current RAM= Original RAM when loading
+                            post[paramsList[6]] = params[3] # for current RAM= Original RAM when loading
+                            post[paramsList[7]] = params[4] # for current RAM= Original RAM when loading
+
                         
                         #print(params[i])
                         #args=params[i]
@@ -115,6 +123,24 @@ def loadList(listPath,paramsList,collection_name,key,append=False ):
         outfile.write(str(e))
         outfile.write('\n')
         outfile.write('Status : FAILURE')
+
+   
+def getItem(key,value,collection_name,no_error = False):
+    db = db_connect.connectMongo()
+    collection = db[collection_name]
+    if(collection.find({key  : value}).count()):
+        message = collection.find({key : value})
+        for data in message:
+            logStr = " Found value in [" + key + "] field of [" + collection_name + "]"
+            #logger.log (logStr)
+            return data
+    else:
+        logStr = " Couldn't find value in [" + key + "] field of [" + collection_name + "]"
+#         if(no_error):
+#             #logger.log (logStr)
+#         else:
+#             logger.log (logStr,True)
+        return None
 
 
 

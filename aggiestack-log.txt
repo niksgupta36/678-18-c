@@ -1,0 +1,557 @@
+_id : 5ba825694706b6103c6b7903
+image_name : linux-ubuntu
+path : /images/linux-ubuntu-v1.0.img
+_id : 5ba825694706b6103c6b7904
+image_name : linux-sles
+path : /images/old-image.img
+_id : 5ba8256a4706b6103c6b7905
+image_name : linux-ubuntu-16
+path : /images/linux-ubuntu-16.img
+_id : 5ba825834706b64348816941
+flavor_name : small
+RAM : 1
+numDisks : 1
+numVcpus : 1
+_id : 5ba825844706b64348816942
+flavor_name : medium
+RAM : 8
+numDisks : 2
+numVcpus : 4
+_id : 5ba825844706b64348816943
+flavor_name : large
+RAM : 16
+numDisks : 2
+numVcpus : 4
+_id : 5ba825844706b64348816944
+flavor_name : xlarge
+RAM : 32
+numDisks : 4
+numVcpus : 8
+_id : 5ba825b24706b60468b05d6e
+hardware_name : m1
+ip : 128.0.0.1
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d6f
+hardware_name : m2
+ip : 128.0.0.2
+RAM : 16
+numDisks : 32
+numVcpus : 4
+_id : 5ba825b34706b60468b05d70
+hardware_name : m3
+ip : 128.0.0.3
+RAM : 16
+numDisks : 16
+numVcpus : 4
+_id : 5ba825b34706b60468b05d71
+hardware_name : m4
+ip : 128.0.0.4
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d72
+hardware_name : k1
+ip : 128.1.1.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d73
+hardware_name : k2
+ip : 128.1.0.2.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d74
+hardware_name : k3
+ip : 128.1.3.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b44706b60468b05d75
+hardware_name : calvin
+ip : 128.129.4.4
+RAM : 8
+numDisks : 16
+numVcpus : 1
+_id : 5ba825b44706b60468b05d76
+hardware_name : hobbes
+ip : 1.1.1.1
+RAM : 16
+numDisks : 64
+numVcpus : 16
+_id : 5ba825b44706b60468b05d77
+hardware_name : dora
+ip : 1.1.1.2
+RAM : 64
+numDisks : 256
+numVcpus : 16
+_id : 5ba825b24706b60468b05d6e
+hardware_name : m1
+ip : 128.0.0.1
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d6f
+hardware_name : m2
+ip : 128.0.0.2
+RAM : 16
+numDisks : 32
+numVcpus : 4
+_id : 5ba825b34706b60468b05d70
+hardware_name : m3
+ip : 128.0.0.3
+RAM : 16
+numDisks : 16
+numVcpus : 4
+_id : 5ba825b34706b60468b05d71
+hardware_name : m4
+ip : 128.0.0.4
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d72
+hardware_name : k1
+ip : 128.1.1.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d73
+hardware_name : k2
+ip : 128.1.0.2.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d74
+hardware_name : k3
+ip : 128.1.3.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b44706b60468b05d75
+hardware_name : calvin
+ip : 128.129.4.4
+RAM : 8
+numDisks : 16
+numVcpus : 1
+_id : 5ba825b44706b60468b05d76
+hardware_name : hobbes
+ip : 1.1.1.1
+RAM : 16
+numDisks : 64
+numVcpus : 16
+_id : 5ba825b44706b60468b05d77
+hardware_name : dora
+ip : 1.1.1.2
+RAM : 64
+numDisks : 256
+numVcpus : 16
+_id : 5ba825b24706b60468b05d6e
+hardware_name : m1
+ip : 128.0.0.1
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d6f
+hardware_name : m2
+ip : 128.0.0.2
+RAM : 16
+numDisks : 32
+numVcpus : 4
+_id : 5ba825b34706b60468b05d70
+hardware_name : m3
+ip : 128.0.0.3
+RAM : 16
+numDisks : 16
+numVcpus : 4
+_id : 5ba825b34706b60468b05d71
+hardware_name : m4
+ip : 128.0.0.4
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d72
+hardware_name : k1
+ip : 128.1.1.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d73
+hardware_name : k2
+ip : 128.1.0.2.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d74
+hardware_name : k3
+ip : 128.1.3.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b44706b60468b05d75
+hardware_name : calvin
+ip : 128.129.4.4
+RAM : 8
+numDisks : 16
+numVcpus : 1
+_id : 5ba825b44706b60468b05d76
+hardware_name : hobbes
+ip : 1.1.1.1
+RAM : 16
+numDisks : 64
+numVcpus : 16
+_id : 5ba825b44706b60468b05d77
+hardware_name : dora
+ip : 1.1.1.2
+RAM : 64
+numDisks : 256
+numVcpus : 16
+_id : 5ba825b24706b60468b05d6e
+hardware_name : m1
+ip : 128.0.0.1
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d6f
+hardware_name : m2
+ip : 128.0.0.2
+RAM : 16
+numDisks : 32
+numVcpus : 4
+_id : 5ba825b34706b60468b05d70
+hardware_name : m3
+ip : 128.0.0.3
+RAM : 16
+numDisks : 16
+numVcpus : 4
+_id : 5ba825b34706b60468b05d71
+hardware_name : m4
+ip : 128.0.0.4
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d72
+hardware_name : k1
+ip : 128.1.1.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d73
+hardware_name : k2
+ip : 128.1.0.2.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d74
+hardware_name : k3
+ip : 128.1.3.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b44706b60468b05d75
+hardware_name : calvin
+ip : 128.129.4.4
+RAM : 8
+numDisks : 16
+numVcpus : 1
+_id : 5ba825b44706b60468b05d76
+hardware_name : hobbes
+ip : 1.1.1.1
+RAM : 16
+numDisks : 64
+numVcpus : 16
+_id : 5ba825b44706b60468b05d77
+hardware_name : dora
+ip : 1.1.1.2
+RAM : 64
+numDisks : 256
+numVcpus : 16
+_id : 5ba825b24706b60468b05d6e
+hardware_name : m1
+ip : 128.0.0.1
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d6f
+hardware_name : m2
+ip : 128.0.0.2
+RAM : 16
+numDisks : 32
+numVcpus : 4
+_id : 5ba825b34706b60468b05d70
+hardware_name : m3
+ip : 128.0.0.3
+RAM : 16
+numDisks : 16
+numVcpus : 4
+_id : 5ba825b34706b60468b05d71
+hardware_name : m4
+ip : 128.0.0.4
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d72
+hardware_name : k1
+ip : 128.1.1.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d73
+hardware_name : k2
+ip : 128.1.0.2.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d74
+hardware_name : k3
+ip : 128.1.3.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b44706b60468b05d75
+hardware_name : calvin
+ip : 128.129.4.4
+RAM : 8
+numDisks : 16
+numVcpus : 1
+_id : 5ba825b44706b60468b05d76
+hardware_name : hobbes
+ip : 1.1.1.1
+RAM : 16
+numDisks : 64
+numVcpus : 16
+_id : 5ba825b44706b60468b05d77
+hardware_name : dora
+ip : 1.1.1.2
+RAM : 64
+numDisks : 256
+numVcpus : 16
+_id : 5ba825b24706b60468b05d6e
+hardware_name : m1
+ip : 128.0.0.1
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d6f
+hardware_name : m2
+ip : 128.0.0.2
+RAM : 16
+numDisks : 32
+numVcpus : 4
+_id : 5ba825b34706b60468b05d70
+hardware_name : m3
+ip : 128.0.0.3
+RAM : 16
+numDisks : 16
+numVcpus : 4
+_id : 5ba825b34706b60468b05d71
+hardware_name : m4
+ip : 128.0.0.4
+RAM : 16
+numDisks : 8
+numVcpus : 4
+_id : 5ba825b34706b60468b05d72
+hardware_name : k1
+ip : 128.1.1.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d73
+hardware_name : k2
+ip : 128.1.0.2.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b34706b60468b05d74
+hardware_name : k3
+ip : 128.1.3.0.
+RAM : 32
+numDisks : 32
+numVcpus : 8
+_id : 5ba825b44706b60468b05d75
+hardware_name : calvin
+ip : 128.129.4.4
+RAM : 8
+numDisks : 16
+numVcpus : 1
+_id : 5ba825b44706b60468b05d76
+hardware_name : hobbes
+ip : 1.1.1.1
+RAM : 16
+numDisks : 64
+numVcpus : 16
+_id : 5ba825b44706b60468b05d77
+hardware_name : dora
+ip : 1.1.1.2
+RAM : 64
+numDisks : 256
+numVcpus : 16
+
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+
+
+Database(MongoClient(host=['cluster0-shard-00-00-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-02-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+
+Deleting previous duplicate entry for hardware_name : m1
+Deleting previous duplicate entry for hardware_name : m2
+Deleting previous duplicate entry for hardware_name : m3
+Deleting previous duplicate entry for hardware_name : m4
+Deleting previous duplicate entry for hardware_name : k1
+Deleting previous duplicate entry for hardware_name : k2
+Deleting previous duplicate entry for hardware_name : k3
+Deleting previous duplicate entry for hardware_name : calvin
+Deleting previous duplicate entry for hardware_name : hobbes
+Deleting previous duplicate entry for hardware_name : dora
+Successfully added 10 new configurations to the machine_collection collection
+Status : SUCCESS
+Database(MongoClient(host=['cluster0-shard-00-00-v0u4h.mongodb.net:27017', 'cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+
+Successfully added 10 new configurations to the machine_collection collection
+Status : SUCCESS
+Database(MongoClient(host=['cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')hardware_name : m1
+ip : 128.0.0.1
+Original RAM : 16
+Original numDisks : 8
+Original numVcpus : 4
+hardware_name : m2
+ip : 128.0.0.2
+Original RAM : 16
+Original numDisks : 32
+Original numVcpus : 4
+hardware_name : m3
+ip : 128.0.0.3
+Original RAM : 16
+Original numDisks : 16
+Original numVcpus : 4
+hardware_name : m4
+ip : 128.0.0.4
+Original RAM : 16
+Original numDisks : 8
+Original numVcpus : 4
+hardware_name : k1
+ip : 128.1.1.0.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : k2
+ip : 128.1.0.2.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : k3
+ip : 128.1.3.0.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : calvin
+ip : 128.129.4.4
+Original RAM : 8
+Original numDisks : 16
+Original numVcpus : 1
+hardware_name : hobbes
+ip : 1.1.1.1
+Original RAM : 16
+Original numDisks : 64
+Original numVcpus : 16
+hardware_name : dora
+ip : 1.1.1.2
+Original RAM : 64
+Original numDisks : 256
+Original numVcpus : 16
+
+
+
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')hardware_name : m1
+Current RAM : 16
+Current numDisks : 8
+Current numVcpus : 4
+ip : 128.0.0.1
+Original RAM : 16
+Original numDisks : 8
+Original numVcpus : 4
+hardware_name : m2
+Current RAM : 16
+Current numDisks : 32
+Current numVcpus : 4
+ip : 128.0.0.2
+Original RAM : 16
+Original numDisks : 32
+Original numVcpus : 4
+hardware_name : m3
+Current RAM : 16
+Current numDisks : 16
+Current numVcpus : 4
+ip : 128.0.0.3
+Original RAM : 16
+Original numDisks : 16
+Original numVcpus : 4
+hardware_name : m4
+Current RAM : 16
+Current numDisks : 8
+Current numVcpus : 4
+ip : 128.0.0.4
+Original RAM : 16
+Original numDisks : 8
+Original numVcpus : 4
+hardware_name : k1
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.1.0.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : k2
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.0.2.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : k3
+Current RAM : 32
+Current numDisks : 32
+Current numVcpus : 8
+ip : 128.1.3.0.
+Original RAM : 32
+Original numDisks : 32
+Original numVcpus : 8
+hardware_name : calvin
+Current RAM : 8
+Current numDisks : 16
+Current numVcpus : 1
+ip : 128.129.4.4
+Original RAM : 8
+Original numDisks : 16
+Original numVcpus : 1
+hardware_name : hobbes
+Current RAM : 16
+Current numDisks : 64
+Current numVcpus : 16
+ip : 1.1.1.1
+Original RAM : 16
+Original numDisks : 64
+Original numVcpus : 16
+hardware_name : dora
+Current RAM : 64
+Current numDisks : 256
+Current numVcpus : 16
+ip : 1.1.1.2
+Original RAM : 64
+Original numDisks : 256
+Original numVcpus : 16
+
+
+
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-00-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-02-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-00-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-02-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
+Database(MongoClient(host=['cluster0-shard-00-02-v0u4h.mongodb.net:27017', 'cluster0-shard-00-00-v0u4h.mongodb.net:27017', 'cluster0-shard-00-01-v0u4h.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, authsource='admin', replicaset='Cluster0-shard-0', ssl=True, retrywrites=True), 'test')
