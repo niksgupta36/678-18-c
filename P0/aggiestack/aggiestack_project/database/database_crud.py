@@ -1,18 +1,11 @@
-
-import aggiestack_project.utility.database_connection as db_connect
-
-
-
+import aggiestack_project.database.database_connection as db_connect
 import os
 from builtins import str
 
-
-
-
-def getList(collection_name, paramsList, display = True):
+def getRecords(collection_name, paramsList, display = True):
     outfile = open("aggiestack-log.txt", "a+")
     
-    db = db_connect.connectMongo()
+    db = db_connect.connectDatabase()
     collection = db[collection_name]
     message = collection.find()
     count=0
@@ -48,24 +41,15 @@ def getList(collection_name, paramsList, display = True):
 #     print('There are a total of '+str(count)+' entries.')
     outfile.write('Status : SUCCESS')
     outfile.write('\n')        
-    
-    
-    
-    
 
-
-def loadList(listPath,paramsList,collection_name,key, offset):
+def insertRecords(listPath,paramsList,collection_name,key, offset):
     try:
         outfile = open("aggiestack-log.txt", "a+")
         outfile.write('\n')
         outfile.write('\n')
-        db = db_connect.connectMongo()
+        db = db_connect.connectDatabase()
         collection = db[collection_name]
         count=0
-   # print(collection)
-#     if not append:
-#         db_connect(collection_name)
-
         if(os.path.isfile(listPath)):
             with open(listPath, "r") as fp:
                 for i, line in enumerate(fp):
@@ -83,10 +67,6 @@ def loadList(listPath,paramsList,collection_name,key, offset):
                                     post[paramsList[6]] = params[3] # for current numDisks= Original numDisks when loading
                                     post[paramsList[7]] = params[4] # for current VirtualCpu= Original VirtualCpu when loading
 
-                        
-                        #print(params[i])
-                        #args=params[i]
-                    #print(params[0])
                         if(collection.find({key  : params[0]}).count()):
                             collection.remove({key: params[0]})
                             logStr = 'Deleting previous duplicate entry for ' +key+' : '+  params[0] 
@@ -96,7 +76,6 @@ def loadList(listPath,paramsList,collection_name,key, offset):
                          
                         post_id = collection.insert_one(post).inserted_id
                    
-                    #print(post_id)
 
                 logStr = 'Success!! Added '+str(count)+' new configurations to the collection : ' +  collection_name 
                 print( logStr )
@@ -121,21 +100,16 @@ def loadList(listPath,paramsList,collection_name,key, offset):
         outfile.write('Status : FAILURE')
 
    
-def getItem(key,value,collection_name):
-    db = db_connect.connectMongo()
+def getRecord(key,value,collection_name):
+    db = db_connect.connectDatabase()
     collection = db[collection_name]
     if(collection.find({key  : value}).count()):
         message = collection.find({key : value})
         for data in message:
             logStr = " Found value in [" + key + "] field of [" + collection_name + "]"
-            #logger.log (logStr)
             return data
     else:
         logStr = " Couldn't find value in [" + key + "] field of [" + collection_name + "]"
-#         if(no_error):
-#             #logger.log (logStr)
-#         else:
-#             logger.log (logStr,True)
         return None
 
 
