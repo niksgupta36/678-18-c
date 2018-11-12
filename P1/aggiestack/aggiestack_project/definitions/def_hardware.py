@@ -67,20 +67,5 @@ def canHost(machine, flavor):
 def insertUpdatedHardware(data, RAM, Disks,Vcpus):  
     db_crud.insertUpdatedHardware(data,RAM,Disks,Vcpus,'machine_collection')
     
-# def splitFile(hardwareListPath):
-#     if(os.path.isfile(hardwareListPath)):
-#         with open(hardwareListPath, "r") as fp:
-#             lines  = fp.readlines()
-#             lines = [x.strip() for x in lines] 
-#             #print lines
-#             racks = lines[0:int(lines[0])+1]
-#             machines = lines[int(int(lines[0])+1):]
-#             rackListPath = './racks.txt'
-#             machineListPath = './machines.txt'
-#             with open(rackListPath, "w") as rackfile:
-#                 for rack in racks:
-#                     rackfile.write("%s\n" % rack)
-#             with open(machineListPath, "w") as machinefile:
-#                 for machine in machines:
-#                     machinefile.write("%s\n" % machine)
-#             return rackListPath, machineListPath    
+def getInstances():
+    return db_crud.getInstances("machine_collection")

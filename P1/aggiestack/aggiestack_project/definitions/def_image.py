@@ -6,5 +6,5 @@ def insertImages(images):
 def getImages():
 
     print ("**** Images available on the server ****")
-    db_crud.getRecords('image_collection',["image_name","path"])  
+    return db_crud.getInstances('image_collection')  
 

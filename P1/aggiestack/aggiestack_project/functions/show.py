@@ -1,5 +1,7 @@
 from .base import Base
-from aggiestack_project.definitions import def_image, def_flavor, def_hardware, def_rack
+from aggiestack_project.definitions import def_image, def_flavor, def_hardware, def_rack,\
+    def_server
+from test.dtracedata import instance
 
 class Show(Base):
     
@@ -8,7 +10,28 @@ class Show(Base):
         outfile = open("aggiestack-log.txt", "a+")
         #print(self.options)
         if(self.options['images']):
-            def_image.getImages()
+            imageslist = def_image.getImages()
+            for image in imageslist:
+                print(image)
+            rackslist = def_rack.getInstances()
+            machineslist = def_hardware.getInstances()
+            instanceslist = def_server.getInstances()
+            for rack in rackslist:
+                for machine in machineslist:
+                    if rack['rack_name'] == machine['rack_name']:
+                        for instance in instanceslist:
+                            if instance['machine_name'] == machine['hardware_name']:
+                                print(rack['rack_name'] + " : " + instance['image_name'])
+                                
+                        
+                        
+#                         print(machine['hardware_name'])
+#                         print(machine['rack_name'])
+                    
+            
+            
+            
+            
         elif(self.options['flavors']):
             def_flavor.getFlavors()
         elif(self.options['hardware']):
