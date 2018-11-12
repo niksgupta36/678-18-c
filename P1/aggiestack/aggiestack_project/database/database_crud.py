@@ -169,3 +169,10 @@ def getInstances(collection_name):
         
         list.append(data)
     return list
+
+
+def getCount(collection_name):
+    outfile = open("aggiestack-log.txt", "a+")
+    db = db_connect.connectDatabase()
+    collection = db[collection_name]
+    return collection.count()
