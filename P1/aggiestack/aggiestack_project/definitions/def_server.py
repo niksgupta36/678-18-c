@@ -1,7 +1,7 @@
 import aggiestack_project.database.database_crud as db_crud
 
 def getHardwareName():
-    return db_crud.getServerName('machine_collection',["hardware_name"])
+    return db_crud.getServerName('machine_collection')
 
 def insertServer(data, flavor, image,instance):    
     db_crud.insertServers(data, flavor, image,instance, "instance_collection")

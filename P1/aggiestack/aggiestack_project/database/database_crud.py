@@ -46,6 +46,12 @@ def insertRecords(listPath,paramsList,collection_name,key, offset):
         count=0
         if(os.path.isfile(listPath)):
             with open(listPath, "r") as fp:
+#                 lines  = fp.readlines()
+#                 lines = [x.strip() for x in lines] 
+#             #print lines
+#                  
+#                 machines = lines[int(int(lines[0])+1):]
+#                 for line in machines:
                 for i, line in enumerate(fp):
                     if i == 0:
                         continue
@@ -57,9 +63,9 @@ def insertRecords(listPath,paramsList,collection_name,key, offset):
                        
                             post[paramsList[i]] = params[i]
                             if key == 'hardware_name':
-                                    post[paramsList[5]] = params[2] # for current RAM= Original RAM when loading
-                                    post[paramsList[6]] = params[3] # for current numDisks= Original numDisks when loading
-                                    post[paramsList[7]] = params[4] # for current VirtualCpu= Original VirtualCpu when loading
+                                    post[paramsList[6]] = params[3] # for current RAM= Original RAM when loading
+                                    post[paramsList[7]] = params[4] # for current numDisks= Original numDisks when loading
+                                    post[paramsList[8]] = params[5] # for current VirtualCpu= Original VirtualCpu when loading
 
                         if(collection.find({key  : params[0]}).count()):
                             collection.remove({key: params[0]})
@@ -106,7 +112,7 @@ def getRecord(key,value,collection_name):
         logStr = " Couldn't find value in [" + key + "] field of [" + collection_name + "]"
         return None
 
-def getServerName(collection_name, paramsList):
+def getServerName(collection_name):
     outfile = open("aggiestack-log.txt", "a+")
     list = []
     db = db_connect.connectDatabase()
@@ -149,7 +155,6 @@ def getInstanceName(collection_name,instance):
 
 def deleteInstance(collection_name,instance):
     outfile = open("aggiestack-log.txt", "a+")
-    list = []
     db = db_connect.connectDatabase()
     collection = db[collection_name]
     collection.remove({"instance_name": instance})
