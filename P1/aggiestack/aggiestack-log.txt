@@ -1,0 +1,8 @@
+
+Command: aggiestack 
+####################################################################
+
+Success!! Added 3 new configurations to the collection : image_collection
+Status : SUCCESS
+Command: aggiestack  config --images image-config
+####################################################################
