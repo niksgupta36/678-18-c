@@ -8,26 +8,32 @@ from aggiestack_project.definitions import def_rack
 
 
 def insertHardware(hardware):  
-    if(os.path.isfile(hardware)):
-        with open(hardware, "r") as fp:
-            lines  = fp.readlines()
-            lines = [x.strip() for x in lines] 
-            #print lines
-            racks = lines[0:int(lines[0])+1]
-            machines = lines[int(int(lines[0])+1):]
-            rackListPath = './racks.txt'
-            machineListPath = './machines.txt'
-            with open(rackListPath, "w") as rackfile:
-                for rack in racks:
-                    rackfile.write("%s\n" % rack)
-            with open(machineListPath, "w") as machinefile:
-                for machine in machines:
-                    machinefile.write("%s\n" % machine)
-#             return rackListPath, machineListPath    
-#     def_rack.insertRecords(hardware);
-            db_crud.insertRecords(rackListPath,["rack_name","rack_storage"],'rack_collection', 'rack_name',0);
-            db_crud.insertRecords(machineListPath,["hardware_name","rack_name","ip","Original RAM","Original num_Disks","Original num_Vcpus", "Current RAM", "Current num_Disks", "Current num_Vcpus"],'machine_collection','hardware_name',3)
+    try:
+        if(os.path.isfile(hardware)):
+            with open(hardware, "r") as fp:
+                lines  = fp.readlines()
+                lines = [x.strip() for x in lines] 
+                #print lines
+                racks = lines[0:int(lines[0])+1]
+                machines = lines[int(int(lines[0])+1):]
+                rackListPath = './racks.txt'
+                machineListPath = './machines.txt'
+                with open(rackListPath, "w") as rackfile:
+                    for rack in racks:
+                        rackfile.write("%s\n" % rack)
+                        #print("rack");
+                with open(machineListPath, "w") as machinefile:
+                    for machine in machines:
+                        machinefile.write("%s\n" % machine)
+                        #print("machhine")
+    #             return rackListPath, machineListPath    
+    #     def_rack.insertRecords(hardware);
+                db_crud.insertRecords(rackListPath,["rack_name","rack_storage"],'rack_collection', 'rack_name',0);
+                db_crud.insertRecords(machineListPath,["hardware_name","rack_name","ip","Original RAM","Original num_Disks","Original num_Vcpus", "Current RAM", "Current num_Disks", "Current num_Vcpus"],'machine_collection','hardware_name',3)
 
+    except Exception as e:
+        print(e)
+        
 def getHardware(hardware_name):
     return db_crud.getRecord('hardware_name',hardware_name,'machine_collection')
 
