@@ -6,3 +6,251 @@ Success!! Added 3 new configurations to the collection : image_collection
 Status : SUCCESS
 Command: aggiestack  config --images image-config
 ####################################################################
+Command: aggiestack 
+####################################################################hardware_name : m1
+ip : 128.0.0.1
+Original RAM : 16
+Original num_Disks : 8
+Original num_Vcpus : 4
+hardware_name : m2
+ip : 128.0.0.2
+Original RAM : 16
+Original num_Disks : 32
+Original num_Vcpus : 4
+hardware_name : m3
+ip : 128.0.0.3
+Original RAM : 16
+Original num_Disks : 16
+Original num_Vcpus : 4
+hardware_name : m4
+ip : 128.0.0.4
+Original RAM : 16
+Original num_Disks : 8
+Original num_Vcpus : 4
+hardware_name : k1
+ip : 128.1.1.0
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : k2
+ip : 128.1.0.2
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : k3
+ip : 128.1.3.0
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : calvin
+ip : 128.129.4.4
+Original RAM : 8
+Original num_Disks : 16
+Original num_Vcpus : 1
+hardware_name : hobbes
+ip : 1.1.1.1
+Original RAM : 16
+Original num_Disks : 64
+Original num_Vcpus : 16
+hardware_name : dora
+ip : 1.1.1.2
+Original RAM : 64
+Original num_Disks : 256
+Original num_Vcpus : 16
+
+Status : SUCCESS
+
+Command: aggiestack  show hardware
+####################################################################hardware_name : m1
+rack_name : r1
+ip : 128.0.0.1
+Original RAM : 16
+Original num_Disks : 8
+Original num_Vcpus : 4
+hardware_name : m2
+rack_name : r1
+ip : 128.0.0.2
+Original RAM : 16
+Original num_Disks : 32
+Original num_Vcpus : 4
+hardware_name : m3
+rack_name : r1
+ip : 128.0.0.3
+Original RAM : 16
+Original num_Disks : 16
+Original num_Vcpus : 4
+hardware_name : m4
+rack_name : r2
+ip : 128.0.0.4
+Original RAM : 16
+Original num_Disks : 8
+Original num_Vcpus : 4
+hardware_name : k1
+rack_name : r2
+ip : 128.1.1.0
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : k2
+rack_name : r2
+ip : 128.1.0.2
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : k3
+rack_name : r2
+ip : 128.1.3.0
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : calvin
+rack_name : r1
+ip : 128.129.4.4
+Original RAM : 8
+Original num_Disks : 16
+Original num_Vcpus : 1
+hardware_name : hobbes
+rack_name : r1
+ip : 1.1.1.1
+Original RAM : 16
+Original num_Disks : 64
+Original num_Vcpus : 16
+hardware_name : dora
+rack_name : r1
+ip : 1.1.1.2
+Original RAM : 64
+Original num_Disks : 256
+Original num_Vcpus : 16
+
+Status : SUCCESS
+
+Command: aggiestack  show hardware
+####################################################################hardware_name : m1
+rack_name : r1
+ip : 128.0.0.1
+Original RAM : 16
+Original num_Disks : 8
+Original num_Vcpus : 4
+hardware_name : m2
+rack_name : r1
+ip : 128.0.0.2
+Original RAM : 16
+Original num_Disks : 32
+Original num_Vcpus : 4
+hardware_name : m3
+rack_name : r1
+ip : 128.0.0.3
+Original RAM : 16
+Original num_Disks : 16
+Original num_Vcpus : 4
+hardware_name : m4
+rack_name : r2
+ip : 128.0.0.4
+Original RAM : 16
+Original num_Disks : 8
+Original num_Vcpus : 4
+hardware_name : k1
+rack_name : r2
+ip : 128.1.1.0
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : k2
+rack_name : r2
+ip : 128.1.0.2
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : k3
+rack_name : r2
+ip : 128.1.3.0
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : calvin
+rack_name : r1
+ip : 128.129.4.4
+Original RAM : 8
+Original num_Disks : 16
+Original num_Vcpus : 1
+hardware_name : hobbes
+rack_name : r1
+ip : 1.1.1.1
+Original RAM : 16
+Original num_Disks : 64
+Original num_Vcpus : 16
+hardware_name : dora
+rack_name : r1
+ip : 1.1.1.2
+Original RAM : 64
+Original num_Disks : 256
+Original num_Vcpus : 16
+
+Status : SUCCESS
+
+Command: aggiestack  show hardware
+####################################################################hardware_name : m1
+rack_name : r1
+ip : 128.0.0.1
+Original RAM : 16
+Original num_Disks : 8
+Original num_Vcpus : 4
+hardware_name : m2
+rack_name : r1
+ip : 128.0.0.2
+Original RAM : 16
+Original num_Disks : 32
+Original num_Vcpus : 4
+hardware_name : m3
+rack_name : r1
+ip : 128.0.0.3
+Original RAM : 16
+Original num_Disks : 16
+Original num_Vcpus : 4
+hardware_name : m4
+rack_name : r2
+ip : 128.0.0.4
+Original RAM : 16
+Original num_Disks : 8
+Original num_Vcpus : 4
+hardware_name : k1
+rack_name : r2
+ip : 128.1.1.0
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : k2
+rack_name : r2
+ip : 128.1.0.2
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : k3
+rack_name : r2
+ip : 128.1.3.0
+Original RAM : 32
+Original num_Disks : 32
+Original num_Vcpus : 8
+hardware_name : calvin
+rack_name : r1
+ip : 128.129.4.4
+Original RAM : 8
+Original num_Disks : 16
+Original num_Vcpus : 1
+hardware_name : hobbes
+rack_name : r1
+ip : 1.1.1.1
+Original RAM : 16
+Original num_Disks : 64
+Original num_Vcpus : 16
+hardware_name : dora
+rack_name : r1
+ip : 1.1.1.2
+Original RAM : 64
+Original num_Disks : 256
+Original num_Vcpus : 16
+
+Status : SUCCESS
+
+Command: aggiestack  show hardware
+####################################################################

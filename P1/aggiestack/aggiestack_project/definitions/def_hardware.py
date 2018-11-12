@@ -42,7 +42,8 @@ def getHardwareName():
 
 def getHardwares():
     print ("***** Hardware available on the server *****")
-    db_crud.getRecords('machine_collection',["hardware_name","ip","Original RAM","Original num_Disks", "Original num_Vcpus"])
+    print(db_crud.getCount('machine_collection'))
+    db_crud.getRecords('machine_collection',["hardware_name","rack_name","ip","Original RAM","Original num_Disks", "Original num_Vcpus"])
    
 def getAdminHardwares():
     print ("**** Current Hardware available on the server ****")
