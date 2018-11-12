@@ -1,5 +1,5 @@
 from .base import Base
-from aggiestack_project.definitions import def_image, def_flavor, def_hardware
+from aggiestack_project.definitions import def_image, def_flavor, def_hardware, def_rack
 
 class Show(Base):
     
@@ -12,6 +12,7 @@ class Show(Base):
         elif(self.options['flavors']):
             def_flavor.getFlavors()
         elif(self.options['hardware']):
+            def_rack.getRacks();
             def_hardware.getHardwares()
         elif(self.options['all']):
             print('\nImages : \n')

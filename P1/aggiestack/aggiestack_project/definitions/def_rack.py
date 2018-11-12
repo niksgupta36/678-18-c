@@ -2,6 +2,7 @@ import aggiestack_project.database.database_crud as db_crud
 
 
 
-# def insertRecords(hardware):
-#         db_crud.insertRecords(hardware,["rack_name","rack_storage"],'rack_collection', 'rack_name',0);
-#     
+def getRacks():
+    print ("***** Racks available on the server *****")
+    db_crud.getRecords('rack_collection',["rack_name","rack_storage"])
+            
