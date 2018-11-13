@@ -148,7 +148,23 @@ def updateHardwareStatus(machinename, status,collection_name):
     db = db_connect.connectDatabase()
     collection = db[collection_name]
     collection.find_one_and_update({"hardware_name": machinename}, 
-                                  {"$set": { "status": 'sick'
+                                  {"$set": { "machine_status": status
+                                             }
+                                 })
+    
+def updateHealthyMachine(instancename,machinename,collection_name):
+    db = db_connect.connectDatabase()
+    collection = db[collection_name]
+    collection.find_one_and_update({"instance_name": instancename}, 
+                                  {"$set": { "machine_name": machinename
+                                             }
+                                 })
+
+def updateRackStatus(rackname, status,collection_name):
+    db = db_connect.connectDatabase()
+    collection = db[collection_name]
+    collection.find_one_and_update({"rack_name": rackname}, 
+                                  {"$set": { "rack_status": status
                                              }
                                  })
     
@@ -187,3 +203,24 @@ def getCount(collection_name):
     db = db_connect.connectDatabase()
     collection = db[collection_name]
     return collection.count()
+
+def getMachineName(collection_name,rackname):
+    outfile = open("aggiestack-log.txt", "a+")
+    list = []
+    db = db_connect.connectDatabase()
+    collection = db[collection_name]
+    message = collection.find({"rack_name": rackname})
+    for data in message:
+        
+        list.append(data)
+    return list
+
+def getFlavorName(collection_name,machinename):
+    list = []
+    db = db_connect.connectDatabase()
+    collection = db[collection_name]
+    message = collection.find({"machine_name": machinename})
+    for data in message:
+        list.append(data)
+    return list
+

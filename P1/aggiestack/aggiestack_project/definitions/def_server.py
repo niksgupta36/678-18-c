@@ -14,3 +14,9 @@ def deleteInstance(instance):
     
 def getInstances():
     return db_crud.getInstances('instance_collection')
+
+def getFlavorName(machinename):
+    return db_crud.getFlavorName('instance_collection', machinename)
+
+def updateHealthyMachine(instancename,machinename):
+    db_crud.updateHealthyMachine(instancename, machinename, "instance_collection")

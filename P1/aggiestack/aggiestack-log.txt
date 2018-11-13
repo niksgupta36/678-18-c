@@ -19,3 +19,63 @@ Success!! Added 10 new configurations to the collection : machine_collection
 Status : SUCCESS
 Command: aggiestack  config --hardware hdwr-config
 ####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+####################################################################

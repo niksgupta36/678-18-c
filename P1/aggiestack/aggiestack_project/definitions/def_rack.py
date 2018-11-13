@@ -9,3 +9,6 @@ def getRacks():
             
 def getInstances():
     return db_crud.getInstances("rack_collection")
+
+def updateRackStatus(rackname, status):
+    db_crud.updateRackStatus(rackname, status, "rack_collection")

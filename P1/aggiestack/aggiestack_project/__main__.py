@@ -15,7 +15,7 @@ Usage:
    aggiestack server delete <instancename>
    aggiestack server list
    aggiestack admin show instances
- 
+   aggiestack admin evacuate <rackname> 
    
 Options:
     <filename>          File name argument.
@@ -25,7 +25,8 @@ Options:
     --images             File describing the images hosting the cloud.
     --flavors            File describing the flavor hosting the cloud.
     <imagename>          name of image    
-    <instancename>       name of instance  
+    <instancename>       name of instance 
+    <rackname>           name of rack
     
 Examples:
   aggiestack admin show hardware

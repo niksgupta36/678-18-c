@@ -40,7 +40,7 @@ def getHardware(hardware_name):
     return db_crud.getRecord('hardware_name',hardware_name,'machine_collection')
 
 def getHardwareName():
-    return db_crud.getServerName('machine_collection',["hardware_name"])
+    return db_crud.getServerName('machine_collection')
 
 def getHardwares():
     print ("***** Hardware available on the server *****")
@@ -57,7 +57,8 @@ def canHost(machine, flavor):
     flavor  = def_flavor.getFlavor(flavor)
     if(int(machine['Current RAM'])>=int(flavor['RAM']) and
        int(machine['Current num_Disks'])>=int(flavor['num_Disks']) and
-       int(machine['Current num_Vcpus'])>=int(flavor['num_Vcpus']) ):
+       int(machine['Current num_Vcpus'])>=int(flavor['num_Vcpus']) and 
+       machine['machine_status'] == 'healthy'):
         insertUpdatedHardware(machine['hardware_name'], 
                               int(machine['Current RAM'])-int(flavor['RAM']), 
                               int(machine['Current num_Disks'])-int(flavor['num_Disks']), 
@@ -75,3 +76,6 @@ def getInstances():
 
 def updateHardwareStatus(machinename, status):
     db_crud.updateHardwareStatus(machinename, status, "machine_collection")
+    
+def getMachineName(rackname):
+    return db_crud.getMachineName("machine_collection", rackname)
