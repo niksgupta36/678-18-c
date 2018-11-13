@@ -71,3 +71,7 @@ def insertUpdatedHardware(data, RAM, Disks,Vcpus):
     
 def getInstances():
     return db_crud.getInstances("machine_collection")
+
+
+def updateHardwareStatus(machinename, status):
+    db_crud.updateHardwareStatus(machinename, status, "machine_collection")

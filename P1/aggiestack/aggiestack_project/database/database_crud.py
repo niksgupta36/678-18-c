@@ -66,7 +66,7 @@ def insertRecords(listPath,paramsList,collection_name,key, offset):
                                     post[paramsList[6]] = params[3] # for current RAM= Original RAM when loading
                                     post[paramsList[7]] = params[4] # for current numDisks= Original numDisks when loading
                                     post[paramsList[8]] = params[5] # for current VirtualCpu= Original VirtualCpu when loading
-                                    post[paramsList[9]] = 'healthy'
+                                    post[paramsList[9]] = 'healthy' # for default machine status as healthy
 
                             if key == 'rack_name':
                                     post[paramsList[2]] = "healthy" # for default rack status as healthy
@@ -144,7 +144,14 @@ def insertUpdatedHardware(data, RAM, Disks,Vcpus,collection_name):
                                              }
                                  })
 
-
+def updateHardwareStatus(machinename, status,collection_name):
+    db = db_connect.connectDatabase()
+    collection = db[collection_name]
+    collection.find_one_and_update({"hardware_name": machinename}, 
+                                  {"$set": { "status": 'sick'
+                                             }
+                                 })
+    
 def getInstanceName(collection_name,instance):
     outfile = open("aggiestack-log.txt", "a+")
     list = []
