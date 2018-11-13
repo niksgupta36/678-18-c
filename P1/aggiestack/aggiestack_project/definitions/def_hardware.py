@@ -28,7 +28,7 @@ def insertHardware(hardware):
                         #print("machhine")
     #             return rackListPath, machineListPath    
     #     def_rack.insertRecords(hardware);
-                db_crud.insertRecords(rackListPath,["rack_name","rack_storage"],'rack_collection', 'rack_name',0);
+                db_crud.insertRecords(rackListPath,["rack_name","rack_storage","rack_status"],'rack_collection', 'rack_name',1);
                 db_crud.insertRecords(machineListPath,["hardware_name","rack_name","ip","Original RAM","Original num_Disks","Original num_Vcpus", "Current RAM", "Current num_Disks", "Current num_Vcpus"],'machine_collection','hardware_name',3)
 
     except Exception as e:

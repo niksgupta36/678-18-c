@@ -67,6 +67,9 @@ def insertRecords(listPath,paramsList,collection_name,key, offset):
                                     post[paramsList[7]] = params[4] # for current numDisks= Original numDisks when loading
                                     post[paramsList[8]] = params[5] # for current VirtualCpu= Original VirtualCpu when loading
 
+                            if key == 'rack_name':
+                                    post[paramsList[2]] = "healthy" # for default rack status as healthy
+                                    
                         if(collection.find({key  : params[0]}).count()):
                             collection.remove({key: params[0]})
                             logStr = 'Deleting previous duplicate entry for ' +key+' : '+  params[0] 

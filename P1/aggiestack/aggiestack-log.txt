@@ -81,3 +81,27 @@ Command: aggiestack  show images
 ####################################################################
 Command: aggiestack  show images
 ####################################################################
+Command: aggiestack  config
+####################################################################
+Command: aggiestack  config --hardware hdwr.config
+####################################################################
+
+Deleting previous duplicate entry for rack_name : r1
+Deleting previous duplicate entry for rack_name : r2
+Success!! Added 2 new configurations to the collection : rack_collection
+Status : SUCCESS
+
+Deleting previous duplicate entry for hardware_name : m1
+Deleting previous duplicate entry for hardware_name : m2
+Deleting previous duplicate entry for hardware_name : m3
+Deleting previous duplicate entry for hardware_name : m4
+Deleting previous duplicate entry for hardware_name : k1
+Deleting previous duplicate entry for hardware_name : k2
+Deleting previous duplicate entry for hardware_name : k3
+Deleting previous duplicate entry for hardware_name : calvin
+Deleting previous duplicate entry for hardware_name : hobbes
+Deleting previous duplicate entry for hardware_name : dora
+Success!! Added 10 new configurations to the collection : machine_collection
+Status : SUCCESS
+Command: aggiestack  config --hardware hdwr-config
+####################################################################
