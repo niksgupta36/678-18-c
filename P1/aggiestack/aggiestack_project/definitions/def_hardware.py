@@ -83,3 +83,6 @@ def getMachineName(rackname):
 def deleteHardware(machine):
     db_crud.deleteHardware("machine_collection", machine)
     
+def insertHardwareByCommand(hardware_name, rack_name, ip, Original_RAM, Original_num_Disks, Original_num_Vcpus, machine_status):
+    db_crud.insertHardwareByCommand(hardware_name, rack_name, ip, Original_RAM, Original_num_Disks, Original_num_Vcpus, machine_status,'machine_collection')
+    

@@ -229,3 +229,18 @@ def deleteHardware(collection_name,machine):
     db = db_connect.connectDatabase()
     collection = db[collection_name]
     collection.remove({"hardware_name": machine})
+    
+    
+def insertHardwareByCommand(hardware_name, rack_name, ip, Original_RAM, Original_num_Disks, Original_num_Vcpus, machine_status,collection_name):
+    db = db_connect.connectDatabase()
+    collection = db[collection_name]
+    collection.insert_many([{"hardware_name":hardware_name,
+                           "Current RAM": Original_RAM,
+                           "Current num_Disks":Original_num_Disks,
+                           "Current num_Vcpus":Original_num_Vcpus,
+                           "machine_status": machine_status,
+                           "rack_name":rack_name,
+                           "ip":ip,
+                           "Original RAM": Original_RAM,
+                           "Original num_Disks":Original_num_Disks,
+                           "Original num_Vcpus":Original_num_Vcpus}])

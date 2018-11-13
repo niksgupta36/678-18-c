@@ -53,4 +53,15 @@ class Admin(Base):
         elif (self.options['remove']):
             machine = self.options['<machinename>']
             def_hardware.deleteHardware(machine)
+            
+        elif (self.options['add']):
+            RAM = self.options['<RAM>']
+            disks = self.options['<NUM_DISKS>']
+            Vcpus = self.options['<VCPUs>']
+            ip = self.options['<IP>']
+            rackname = self.options['<rackname>']
+            machinename = self.options['<machinename>']
+            def_hardware.insertHardwareByCommand(machinename, rackname, ip, RAM, disks, Vcpus, "healthy")
+                
+            
              

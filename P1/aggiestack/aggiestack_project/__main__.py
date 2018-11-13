@@ -16,7 +16,9 @@ Usage:
    aggiestack server list
    aggiestack admin show instances
    aggiestack admin evacuate <rackname>
-   aggiestack admin remove <machinename> 
+   aggiestack admin remove <machinename>
+   aggiestack admin add -mem <RAM> -disk <NUM_DISKS> -vcpus <VCPUs> -ip <IP> -rack <rackname> <machinename> 
+ 
    
 Options:
     <filename>          File name argument.
@@ -28,10 +30,14 @@ Options:
     <imagename>          name of image    
     <instancename>       name of instance 
     <rackname>           name of rack
+    <RAM>                Ram of the machine
+    <NUM_DISKS>          Disks on the machine
+    <VCPUs>              VCPUs on the machine
+    <IP>                 IP address of the machine
     
 Examples:
   aggiestack admin show hardware
-
+  
 """
 import sys
 from inspect import getmembers, isclass

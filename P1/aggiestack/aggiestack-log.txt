@@ -79,3 +79,11 @@ Command: aggiestack  admin evacuate r1
 
 Command: aggiestack  admin evacuate r1
 ####################################################################
+Command: aggiestack 
+####################################################################
+Command: aggiestack  admin add -mem 64 –disk 1 –vcpus 1 –ip 124.1.1.1 –rack r2 m9
+####################################################################
+
+
+Command: aggiestack  admin add -mem 64 -disk 1 -vcpus 1 -ip 124.1.1.1 -rack r2 m9
+####################################################################
