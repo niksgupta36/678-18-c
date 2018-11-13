@@ -34,17 +34,20 @@ class Admin(Base):
         elif (self.options['evacuate']):
             rackname = self.options['<rackname>']
             def_rack.updateRackStatus(rackname, 'sick')
+            
             sickinstancelist = []
             sickmachinelist = def_hardware.getMachineName(rackname)
-            for machine in sickmachinelist:
-                list = def_server.getFlavorName(machine['hardware_name'])
-                if len(list)!=0:
-                    sickinstancelist.append(list[0])  
-            machinenames = def_hardware.getHardwareName()
+            
             for machine in sickmachinelist:
                 def_hardware.updateHardwareStatus(machine['hardware_name'], 'sick')
+                list = def_server.getFlavorName(machine['hardware_name'])
+                if len(list)!=0:
+                    sickinstancelist += list  
+                    
+                    
+            machinenames = def_hardware.getHardwareName()
+            
             for instance in sickinstancelist:
-                print(instance)
                 for machine in machinenames:
                     if def_hardware.canHost(machine,instance['flavor_name'])=='yes':
                         def_server.updateHealthyMachine(instance['instance_name'], machine)
@@ -60,6 +63,7 @@ class Admin(Base):
             Vcpus = self.options['<VCPUs>']
             ip = self.options['<IP>']
             rackname = self.options['<rackname>']
+            
             machinename = self.options['<machinename>']
             def_hardware.insertHardwareByCommand(machinename, rackname, ip, RAM, disks, Vcpus, "healthy")
                 
