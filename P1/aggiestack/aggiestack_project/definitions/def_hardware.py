@@ -79,3 +79,7 @@ def updateHardwareStatus(machinename, status):
     
 def getMachineName(rackname):
     return db_crud.getMachineName("machine_collection", rackname)
+
+def deleteHardware(machine):
+    db_crud.deleteHardware("machine_collection", machine)
+    

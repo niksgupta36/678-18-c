@@ -224,3 +224,8 @@ def getFlavorName(collection_name,machinename):
         list.append(data)
     return list
 
+def deleteHardware(collection_name,machine):
+    outfile = open("aggiestack-log.txt", "a+")
+    db = db_connect.connectDatabase()
+    collection = db[collection_name]
+    collection.remove({"hardware_name": machine})

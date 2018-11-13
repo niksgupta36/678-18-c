@@ -15,7 +15,8 @@ Usage:
    aggiestack server delete <instancename>
    aggiestack server list
    aggiestack admin show instances
-   aggiestack admin evacuate <rackname> 
+   aggiestack admin evacuate <rackname>
+   aggiestack admin remove <machinename> 
    
 Options:
     <filename>          File name argument.

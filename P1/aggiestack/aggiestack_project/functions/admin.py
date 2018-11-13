@@ -50,6 +50,7 @@ class Admin(Base):
                         def_server.updateHealthyMachine(instance['instance_name'], machine)
                         break;
                          
-                
-            
+        elif (self.options['remove']):
+            machine = self.options['<machinename>']
+            def_hardware.deleteHardware(machine)
              
