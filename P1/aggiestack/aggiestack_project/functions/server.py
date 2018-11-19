@@ -1,16 +1,15 @@
 from .base import Base
 from aggiestack_project.definitions import def_hardware, def_server, def_flavor
-
+import aggiestack_project.definitions.logger as logger
 
 class Server(Base):
    
 
     def run(self):
-        #print(self.options)
         
-        outfile = open("aggiestack-log.txt", "a+")
-        outfile.write('\n')
-        outfile.write('\n')
+#         outfile = open("aggiestack-log.txt", "a+")
+        logger('\n')
+        logger('\n')
         if (self.options['create'] ):
             
             result=(def_server.getHardwareName()) 
@@ -19,7 +18,8 @@ class Server(Base):
             for data in result:
                 if def_hardware.canHost(data,self.options['<flavor>'])=='yes':
                     def_server.insertServer(data, self.options['<flavor>'], image,instance)
-                    print("success")
+                    print("Server created!")
+                    logger('Server created!')
                     break;
             
         if (self.options['delete'] ):
@@ -47,17 +47,23 @@ class Server(Base):
             
         
         if (self.options['list'] ):
-            
             res = def_server.getInstances()
-#             for data in res:
-            
-            
+#             outfile = open("aggiestack-log.txt", "a+")
+            logger('\n')
+            logger('\n')
+            if res == []:
+                print('No server to list')
+                
+                logger('No server to list')
+                
             for data in res:
                 listservers = []
                 listservers.append("instance_name: " + data['instance_name'])
                 listservers.append("flavor_name: " + data['flavor_name'])
                 listservers.append("image_name: " + data['image_name'])
+                logger(listservers)
                 print(listservers)
+                
             
 
                 

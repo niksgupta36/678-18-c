@@ -1,89 +1,37 @@
 
-
-Deleting previous duplicate entry for rack_name : r1
-Deleting previous duplicate entry for rack_name : r2
-Success!! Added 2 new configurations to the collection : rack_collection
-Status : SUCCESS
-
-Deleting previous duplicate entry for hardware_name : m1
-Deleting previous duplicate entry for hardware_name : m2
-Deleting previous duplicate entry for hardware_name : m3
-Deleting previous duplicate entry for hardware_name : m4
-Deleting previous duplicate entry for hardware_name : k1
-Deleting previous duplicate entry for hardware_name : k2
-Deleting previous duplicate entry for hardware_name : k3
-Deleting previous duplicate entry for hardware_name : calvin
-Deleting previous duplicate entry for hardware_name : hobbes
-Deleting previous duplicate entry for hardware_name : dora
-Success!! Added 10 new configurations to the collection : machine_collection
-Status : SUCCESS
-Command: aggiestack  config --hardware hdwr-config
+Command: aggiestack  server create --image linux --flavors large abc
+####################################################################
+Command: aggiestack  server create --image linux --flavors large abc
+####################################################################
+Command: aggiestack  server create --image linux --flavors large abc
 ####################################################################
 
 
-Command: aggiestack  admin evacuate r1
+
+Updated data inserted into database
+
+Data inserted into database
+Command: aggiestack  server create --image linux --flavors large abc
 ####################################################################
 
 
-Command: aggiestack  admin evacuate r1
-####################################################################
 
+Updated data inserted into database
 
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
-####################################################################
-
-
-Command: aggiestack  admin evacuate r1
+Data inserted into databaseServer created!
+Command: aggiestack  server create --image linux --flavors large abc
 ####################################################################
 Command: aggiestack 
 ####################################################################
-Command: aggiestack  admin add -mem 64 –disk 1 –vcpus 1 –ip 124.1.1.1 –rack r2 m9
+
+
+
+Updated data inserted into database
+
+Instance deleted : abc
+Command: aggiestack  server delete abc
 ####################################################################
 
 
-Command: aggiestack  admin add -mem 64 -disk 1 -vcpus 1 -ip 124.1.1.1 -rack r2 m9
+Command: aggiestack  server delete abc
 ####################################################################

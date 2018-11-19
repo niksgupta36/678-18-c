@@ -13,7 +13,6 @@ def insertHardware(hardware):
             with open(hardware, "r") as fp:
                 lines  = fp.readlines()
                 lines = [x.strip() for x in lines] 
-                #print lines
                 racks = lines[0:int(lines[0])+1]
                 machines = lines[int(int(lines[0])+1):]
                 rackListPath = './racks.txt'
@@ -21,18 +20,11 @@ def insertHardware(hardware):
                 with open(rackListPath, "w") as rackfile:
                     for rack in racks:
                         rackfile.write("%s\n" % rack)
-                        #print("rack");
                 with open(machineListPath, "w") as machinefile:
                     for machine in machines:
                         machinefile.write("%s\n" % machine)
-                        #print("machhine")
-    #             return rackListPath, machineListPath    
-    #     def_rack.insertRecords(hardware);
-
                 db_crud.insertRecords(rackListPath,["rack_name","rack_storage","rack_status"],'rack_collection', 'rack_name',1);
                 db_crud.insertRecords(machineListPath,["hardware_name","rack_name","ip","Original RAM","Original num_Disks","Original num_Vcpus", "Current RAM", "Current num_Disks", "Current num_Vcpus", "machine_status"],'machine_collection','hardware_name',4)
-
-
     except Exception as e:
         print(e)
         
@@ -52,7 +44,6 @@ def getAdminHardwares():
     db_crud.getRecords('machine_collection',["hardware_name","ip","Original RAM","Original num_Disks","Original num_Vcpus", "Current RAM", "Current num_Disks", "Current num_Vcpus"])   
  
 def canHost(machine, flavor):
-   
     machine = getHardware(machine)
     flavor  = def_flavor.getFlavor(flavor)
     if(int(machine['Current RAM'])>=int(flavor['RAM']) and
@@ -72,7 +63,6 @@ def insertUpdatedHardware(data, RAM, Disks,Vcpus):
     
 def getInstances():
     return db_crud.getInstances("machine_collection")
-
 
 def updateHardwareStatus(machinename, status):
     db_crud.updateHardwareStatus(machinename, status, "machine_collection")

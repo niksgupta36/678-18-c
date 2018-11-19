@@ -2,6 +2,7 @@ from .base import Base
 import aggiestack_project.definitions.def_hardware as def_hardware
 import aggiestack_project.definitions.def_server as def_server
 from aggiestack_project.definitions import def_rack
+import aggiestack_project.definitions.logger as logger
 
 
 class Admin(Base):
@@ -9,22 +10,28 @@ class Admin(Base):
 
     def run(self):
 
-        outfile = open("aggiestack-log.txt", "a+")
-        outfile.write('\n')
-        outfile.write('\n')
+#         outfile = open("aggiestack-log.txt", "a+")
+        logger.logger('\n')
+        logger.logger('\n')
         
         if (self.options['show'] & self.options['hardware'] ):
             def_hardware.getAdminHardwares()  
     
         elif (self.options['can_host']):
             result=def_hardware.canHost(self.options['<machinename>'],self.options['<flavor>'])
-            outfile.write(str(result))
-            outfile.write('\n')
-            outfile.write('Status : SUCCESS')
+            logger.logger(str(result))
+            logger.logger('\n')
+            logger.logger('Status : SUCCESS')
             print(result)
             
         elif (self.options['show'] & self.options['instances']):
             res = def_server.getInstances()
+            if res == []:
+                print('No instances to list')
+#             outfile = open("aggiestack-log.txt", "a+")
+            logger.logger('\n')
+            logger.logger('\n')
+            logger.logger('No server to list')
             for data in res:
                 listservers = []
                 listservers.append("machine_name: " + data['machine_name'])

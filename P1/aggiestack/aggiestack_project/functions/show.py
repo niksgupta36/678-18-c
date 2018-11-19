@@ -2,12 +2,13 @@ from .base import Base
 from aggiestack_project.definitions import def_image, def_flavor, def_hardware, def_rack,\
     def_server
 from test.dtracedata import instance
+from aggiestack_project.definitions.logger import *
 
 class Show(Base):
     
 
     def run(self):
-        outfile = open("aggiestack-log.txt", "a+")
+#         outfile = open("aggiestack-log.txt", "a+")
         #print(self.options)
         if(self.options['images']):
             imageslist = def_image.getImages()
@@ -23,14 +24,7 @@ class Show(Base):
                             if instance['machine_name'] == machine['hardware_name']:
                                 print(rack['rack_name'] + " : " + instance['image_name'])
                                 
-                        
-                        
-#                         print(machine['hardware_name'])
-#                         print(machine['rack_name'])
-                    
-            
-            
-            
+
             
         elif(self.options['flavors']):
             def_flavor.getFlavors()
@@ -45,6 +39,6 @@ class Show(Base):
             print('\nHardware: \n')
             def_hardware.getHardwares()    
         else:
-            outfile.write('Status : FAILURE')
-            outfile.write('\n')
-            outfile.write("Invalid parameter")
+            logger.logger('Status : FAILURE')
+            logger.logger('\n')
+            logger.logger("Invalid parameter")
