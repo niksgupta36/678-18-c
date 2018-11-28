@@ -3,6 +3,7 @@ import os.path
 
 from aggiestack_project.definitions import def_flavor
 from aggiestack_project.definitions import def_rack
+import aggiestack_project.definitions.logger as logger
 
 
 
@@ -36,7 +37,9 @@ def getHardwareName():
 
 def getHardwares():
     print ("***** Hardware available on the server *****")
-    print(db_crud.getCount('machine_collection'))
+    print("Total: "+ str(db_crud.getCount('machine_collection')))
+    logger.logger("Total: "+ str(db_crud.getCount('machine_collection')))
+    logger.logger("\n")
     db_crud.getRecords('machine_collection',["hardware_name","rack_name","ip","Original RAM","Original num_Disks", "Original num_Vcpus"])
    
 def getAdminHardwares():

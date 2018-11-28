@@ -1,6 +1,7 @@
 from .base import Base
 from aggiestack_project.definitions import def_hardware, def_server, def_flavor
 import aggiestack_project.definitions.logger as logger
+from aggiestack_project.definitions.logger import loggerlist
 
 class Server(Base):
    
@@ -61,7 +62,7 @@ class Server(Base):
                 listservers.append("instance_name: " + data['instance_name'])
                 listservers.append("flavor_name: " + data['flavor_name'])
                 listservers.append("image_name: " + data['image_name'])
-                logger(listservers)
+                loggerlist(listservers)
                 print(listservers)
                 
             

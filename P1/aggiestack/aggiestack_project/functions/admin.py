@@ -11,8 +11,8 @@ class Admin(Base):
     def run(self):
 
 #         outfile = open("aggiestack-log.txt", "a+")
-        logger.logger('\n')
-        logger.logger('\n')
+        logger('\n')
+        logger('\n')
         
         if (self.options['show'] & self.options['hardware'] ):
             def_hardware.getAdminHardwares()  
@@ -29,9 +29,9 @@ class Admin(Base):
             if res == []:
                 print('No instances to list')
 #             outfile = open("aggiestack-log.txt", "a+")
-            logger.logger('\n')
-            logger.logger('\n')
-            logger.logger('No server to list')
+            logger('\n')
+            logger('\n')
+            logger('No server to list')
             for data in res:
                 listservers = []
                 listservers.append("machine_name: " + data['machine_name'])
