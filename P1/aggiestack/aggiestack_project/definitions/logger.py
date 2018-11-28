@@ -3,12 +3,23 @@ from aggiestack_project.definitions import *;
 from aggiestack_project.functions import *;
 
 
+
 def logger(logs):
-    outfile = open("aggiestack-log.txt", "a+")
-    outfile.write(logs)
-    
+    try:
+        outfile = open("aggiestack-log.txt", "a+")
+        outfile.write("\n")
+        outfile.write(logs)
+    except Exception as e:
+        print(e) 
+        
+            
 def loggerlist(logs):
-    outfile = open("aggiestack-log.txt", "a+")
-    for item in logs:
-        outfile.write(item)
-    
+    try:
+        outfile = open("aggiestack-log.txt", "a+")
+        outfile.write("\n")
+        for item in logs:
+            outfile.write(item)
+            outfile.write("\n")
+    except Exception as e:
+        print(e) 
+        

@@ -21,8 +21,8 @@ Usage:
  
    
 Options:
-    <filename>          File name argument.
-    <machinename>       Physical server argument.
+    <filename>           File name argument.
+    <machinename>        Physical server argument.
     <flavor>             Virtual server type.
     --hardware           File describing the hardware hosting the cloud.
     --images             File describing the images hosting the cloud.
@@ -44,25 +44,21 @@ from inspect import getmembers, isclass
 import aggiestack_project.functions
 from aggiestack_project.functions import server
 from docopt import docopt
-
+import aggiestack_project.definitions.logger as logger
 from . import __version__ as VERSION
 from _ast import arg
  
 def main():
    
-    #print("hello")
-    outfile = open("aggiestack-log.txt", "a+")
-    outfile.write('\n')
+    
+    logger('\n')
     args = sys.argv[1:]
     st = ""
     for arg in args:
-#         print('passed argument :: {}'.format(arg))
         st = st +" "+ arg
-    outfile.write('Command: '+'aggiestack '+str(st))
-    outfile.write('\n')
-    outfile.write('####################################################################')
+    logger('Command: '+'aggiestack '+str(st))
+    logger('####################################################################')
     usage = docopt(__doc__, version=VERSION)
-    #print(options)
      
     
     for (a, b) in usage.items():

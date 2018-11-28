@@ -1,0 +1,157 @@
+
+No server to list
+Command: aggiestack  admin show instances
+####################################################################
+Command: aggiestack  admin show instances
+####################################################################
+Command: aggiestack  admin show instances
+####################################################################
+Command: aggiestack  admin show instances
+####################################################################
+Command: aggiestack  admin show instances
+####################################################################
+Command: aggiestack  admin show instances
+####################################################################
+machine_name: m2
+instance_name: niks
+
+Command: aggiestack  admin show instances
+####################################################################
+machine_name: m2
+instance_name: niks
+
+Status : SUCCESS
+Command: aggiestack  admin show instances
+####################################################################
+Updated data inserted into database
+Instance deleted : niks
+Command: aggiestack  server delete niks
+####################################################################
+Command: aggiestack  admin show instances
+####################################################################
+No server to list
+Status : SUCCESS
+Command: aggiestack  admin show instances
+####################################################################
+Updated data inserted into database
+Data inserted into database
+Server created!
+Status : SUCCESS
+Command: aggiestack  server create --image linux --flavor small niks
+####################################################################
+machine_name: m2
+instance_name: niks
+
+Status : SUCCESS
+Command: aggiestack  admin show instances
+####################################################################
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated data inserted into database
+Updated data inserted into database
+Command: aggiestack  admin evacuate r1
+####################################################################
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Command: aggiestack  admin evacuate r1
+####################################################################
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Command: aggiestack  admin evacuate r2
+####################################################################
+Command: aggiestack 
+####################################################################
+Success!! Added 2 new configurations to the collection : rack_collection
+Status : SUCCESS
+Success!! Added 10 new configurations to the collection : machine_collection
+Status : SUCCESS
+Command: aggiestack  config --hardware hdwr-config
+####################################################################
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Command: aggiestack  admin evacuate r1
+####################################################################
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Command: aggiestack  admin evacuate r1
+####################################################################
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Command: aggiestack  admin evacuate r1
+####################################################################
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+
+Status : FAILED
+Command: aggiestack  admin evacuate r1
+####################################################################
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Status : SUCCESS
+Command: aggiestack  admin evacuate r1
+####################################################################
+Machine deleted : m1
+Command: aggiestack  admin remove m1
+####################################################################
+Machine deleted : m1
+Status : SUCCESS
+Command: aggiestack  admin remove m1
+####################################################################
+Machine data inserted into database
+Status : SUCCESS
+Command: aggiestack  admin add -mem 345 -disk 34 -vcpus 23 -ip 2397ry87 -rack r1 m2
+####################################################################
+Command: aggiestack 
+####################################################################
+Command: aggiestack  config --hardware hdwr-confi
+####################################################################
+Command: aggiestack  config --hardwae hdwr-config
+####################################################################
+Command: aggiestack  config --hardware
+####################################################################
+
+
+Command: aggiestack  config --hardware hdwr-confi
+####################################################################
+
+
+Command: aggiestack  config --hardware
+####################################################################
