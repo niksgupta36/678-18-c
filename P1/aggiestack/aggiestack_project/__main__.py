@@ -56,8 +56,10 @@ def main():
         st = ""
         for arg in args:
             st = st +" "+ arg
-        logger('Command: '+'aggiestack '+str(st))
         logger('####################################################################')
+        logger('\n')
+        logger('Command: '+'aggiestack '+str(st))
+        logger('\n')
         usage = docopt(__doc__, version=VERSION)
          
         
@@ -70,4 +72,6 @@ def main():
                 command.run()
                 
     except Exception as e:
-        print("")            
+        print(e)            
+    
+    

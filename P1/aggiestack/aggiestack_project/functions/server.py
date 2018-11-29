@@ -1,5 +1,6 @@
 from .base import Base
-from aggiestack_project.definitions import def_hardware, def_server, def_flavor
+from aggiestack_project.definitions import def_hardware, def_server, def_flavor,\
+    def_image
 import aggiestack_project.definitions.logger as logger
 from aggiestack_project.definitions.logger import loggerlist
 
@@ -12,15 +13,22 @@ class Server(Base):
                 
                 result=(def_server.getHardwareName()) 
                 image = self.options['<imagename>']
-                instance = self.options['<instancename>']
-                for data in result:
-                    if def_hardware.canHost(data,self.options['<flavor>'])=='yes':
-                        def_server.insertServer(data, self.options['<flavor>'], image,instance)
-                        print("Server created!")
-                        logger('Server created!')
-                        logger('Status : SUCCESS')
-                        break;
-                
+                imagelist = def_image.checkValidImages()
+                instance = ""
+                for item in imagelist:
+                    if image == item['image_name']:
+                        instance = self.options['<instancename>']
+                        for data in result:
+                            if def_hardware.canHost(data,self.options['<flavor>'])=='yes':
+                                def_server.insertServer(data, self.options['<flavor>'], image,instance)
+                                print("Server created!")
+                                logger('Server created!')
+                                logger('Status : SUCCESS')
+                                break;
+                if instance=="":
+                    print("Image does not match with the image in storage server! Please try again with the correct image name") 
+                    logger('Image does not match with the image in storage server! Please try again with the correct image name') 
+                    logger('Status : SUCCESS')      
             if (self.options['delete'] ):
                 
                 

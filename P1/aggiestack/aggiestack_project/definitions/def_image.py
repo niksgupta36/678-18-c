@@ -7,3 +7,6 @@ def getImages():
     print ("**** Images available on the server ****")
     return db_crud.getInstances('image_collection')  
 
+def checkValidImages():
+    return db_crud.getInstances('image_collection') 
+
