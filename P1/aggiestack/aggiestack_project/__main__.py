@@ -6,6 +6,7 @@ Usage:
    aggiestack config --images <filename>
    aggiestack config --flavors <filename>
    aggiestack admin show hardware
+   aggiestack admin remove <machinename>
    aggiestack admin can_host <machinename> <flavor>
    aggiestack show hardware
    aggiestack show images
@@ -16,7 +17,6 @@ Usage:
    aggiestack server list
    aggiestack admin show instances
    aggiestack admin evacuate <rackname>
-   aggiestack admin remove <machinename>
    aggiestack admin add -mem <RAM> -disk <NUM_DISKS> -vcpus <VCPUs> -ip <IP> -rack <rackname> <machinename> 
  
    
@@ -50,21 +50,24 @@ from _ast import arg
  
 def main():
    
-    
-    logger('\n')
-    args = sys.argv[1:]
-    st = ""
-    for arg in args:
-        st = st +" "+ arg
-    logger('Command: '+'aggiestack '+str(st))
-    logger('####################################################################')
-    usage = docopt(__doc__, version=VERSION)
-     
-    
-    for (a, b) in usage.items():
-        if hasattr(aggiestack_project.functions, a) and b:
-            module = getattr(aggiestack_project.functions, a)
-            aggiestack_project.functions = getmembers(module, isclass)
-            command = [command[1] for command in aggiestack_project.functions if command[0] != 'Base'][0]
-            command = command(usage)
-            command.run()
+    try:
+        logger('\n')
+        args = sys.argv[1:]
+        st = ""
+        for arg in args:
+            st = st +" "+ arg
+        logger('Command: '+'aggiestack '+str(st))
+        logger('####################################################################')
+        usage = docopt(__doc__, version=VERSION)
+         
+        
+        for (a, b) in usage.items():
+            if hasattr(aggiestack_project.functions, a) and b:
+                module = getattr(aggiestack_project.functions, a)
+                aggiestack_project.functions = getmembers(module, isclass)
+                command = [command[1] for command in aggiestack_project.functions if command[0] != 'Base'][0]
+                command = command(usage)
+                command.run()
+                
+    except Exception as e:
+        print("")            
