@@ -59,7 +59,15 @@ class Admin(Base):
                              
             elif (self.options['remove']):
                 machine = self.options['<machinename>']
-                def_hardware.deleteHardware(machine)
+                instancelist = def_server.getInstances()
+                flag = 1
+                for instance in instancelist:
+                    if instance['machine_name']==machine:
+                        print("Machine cannot be removed as an instance is already hosted on it")
+                        flag = 0;
+                        break;
+                if flag == 1:
+                    def_hardware.deleteHardware(machine)
                 logger('Status : SUCCESS')    
                 
             elif (self.options['add']):
