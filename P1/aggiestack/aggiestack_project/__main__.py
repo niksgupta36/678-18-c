@@ -6,7 +6,7 @@ Usage:
    aggiestack config --images <filename>
    aggiestack config --flavors <filename>
    aggiestack admin show hardware
-   aggiestack admin remove <machinename>
+   aggiestack admin rem <machinename>
    aggiestack admin can_host <machinename> <flavor>
    aggiestack show hardware
    aggiestack show images

@@ -35,3 +35,23 @@ Command: aggiestack  admin remove k1
 
 Machine deleted : k1
 Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem k1
+
+
+
+Status : FAILED
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem k1
+
+
+Machine deleted : k1
+Status : SUCCESS

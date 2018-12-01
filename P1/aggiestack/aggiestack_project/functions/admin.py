@@ -57,7 +57,7 @@ class Admin(Base):
                             break;
                 logger('Status : SUCCESS')     
                              
-            elif (self.options['remove']):
+            elif (self.options['rem']):
                 machine = self.options['<machinename>']
                 instancelist = def_server.getInstances()
                 flag = 1
