@@ -276,9 +276,11 @@ def deleteHardware(collection_name,machine):
     try:
         db = db_connect.connectDatabase()
         collection = db[collection_name]
+        collection1 = db["instance_collection"]
         logger.logger('Machine deleted : '+ machine)
         print('Machine deleted : '+ machine)
         collection.remove({"hardware_name": machine})
+        collection1.remove({"machine_name": machine})
     except Exception as e:
         print(e)
         logger.logger(e)
