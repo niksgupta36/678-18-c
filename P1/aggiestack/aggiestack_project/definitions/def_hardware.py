@@ -24,8 +24,13 @@ def insertHardware(hardware):
                 with open(machineListPath, "w") as machinefile:
                     for machine in machines:
                         machinefile.write("%s\n" % machine)
+                db_crud.insertRecords(machineListPath,["hardware_name","rack_name","ip","Original RAM","Original num_Disks","Original num_Vcpus", "Current RAM", "Current num_Disks", "Current num_Vcpus", "machine_status"],'machine_collection','hardware_name',4)        
                 db_crud.insertRecords(rackListPath,["rack_name","rack_storage","rack_status"],'rack_collection', 'rack_name',1);
-                db_crud.insertRecords(machineListPath,["hardware_name","rack_name","ip","Original RAM","Original num_Disks","Original num_Vcpus", "Current RAM", "Current num_Disks", "Current num_Vcpus", "machine_status"],'machine_collection','hardware_name',4)
+        else:
+            print('File not found (Invalid path)')
+            logger.logger('File not found (Invalid path)')
+            logger.logger('Status : FAILURE')
+                    
     except Exception as e:
         print(e)
         
