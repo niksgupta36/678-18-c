@@ -37,6 +37,7 @@ class Show(Base):
             print('\nHardware: \n')
             def_hardware.getHardwares()    
         else:
+            logger.logger('\n')
             logger.logger('Status : FAILURE')
             logger.logger('\n')
             logger.logger("Invalid parameter")

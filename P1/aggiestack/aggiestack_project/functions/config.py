@@ -20,6 +20,7 @@ class Config(Base):
                 def_hardware.insertHardware(hardware_file)
         except Exception as e:
             print(e)
-            logger(e)     
+            logger(e) 
+            logger('\n')    
             logger('Status : FAILED')   
         

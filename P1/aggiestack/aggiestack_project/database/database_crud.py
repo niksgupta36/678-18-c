@@ -14,7 +14,6 @@ def getRecords(collection_name, paramsList, display = True):
             if display:
                 for the_key, the_value in data.items():
                     if not isinstance(the_value,(list,)): 
-    
                         for param in paramsList:
                             if param == the_key:
                                 count+=1
@@ -39,7 +38,7 @@ def insertRecords(listPath,paramsList,collection_name,key, offset):
         db = db_connect.connectDatabase()
         collection = db[collection_name]
         count=0
-        if(os.path.isfile(listPath)):
+        if(os.path.isfile(listPath) == True):
             with open(listPath, "r") as fp:
                 for i, line in enumerate(fp):
                     if i == 0:
@@ -276,15 +275,17 @@ def deleteHardware(collection_name,machine):
     try:
         db = db_connect.connectDatabase()
         collection = db[collection_name]
-        logger.logger('Machine deleted : '+ machine)
+        
         
         res=collection.remove({"hardware_name": machine})
         #print(res['n']);
         if(1==res['n']):
             print('Machine deleted : '+ machine)
-            
+            logger.logger('Machine deleted : '+ machine)
         else:
-            print('Machine does not exist : '+ machine)     
+            print('Machine does not exist : '+ machine) 
+            logger.logger('Machine does not exist : '+ machine)  
+              
     except Exception as e:
         print(e)
         logger.logger(e)
