@@ -9,18 +9,17 @@ class Show(Base):
 
     def run(self):
         if(self.options['images']):
-            imageslist = def_image.getImages()
-            for image in imageslist:
-                print(image)
-            rackslist = def_rack.getInstances()
-            machineslist = def_hardware.getInstances()
-            instanceslist = def_server.getInstances()
-            for rack in rackslist:
-                for machine in machineslist:
-                    if rack['rack_name'] == machine['rack_name']:
-                        for instance in instanceslist:
-                            if instance['machine_name'] == machine['hardware_name']:
-                                print(rack['rack_name'] + " : " + instance['image_name'])
+            images = (def_image.getImages())
+            for image in images:
+                print("image_name : " + image['image_name'])
+                logger("image_name : " + image['image_name'])
+                print("image_size : " + image['image_size'])
+                logger("image_size : " + image['image_size'])
+                print("path : " + image['path'])
+                logger("path : " + image['path'])
+                print("\n")
+                logger("\n")
+                logger('Status : SUCCESS')
                                 
 
             

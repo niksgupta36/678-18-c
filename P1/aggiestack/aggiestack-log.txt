@@ -115,3 +115,61 @@ Command: aggiestack  admin rem k3
 
 Machine deleted : k3
 Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  config --hardware hdwr-config
+
+
+Deleting previous duplicate entry for rack_name : r1
+Deleting previous duplicate entry for rack_name : r2
+Success!! Added 2 new configurations to the collection : rack_collection
+Status : SUCCESS
+Deleting previous duplicate entry for hardware_name : m1
+Deleting previous duplicate entry for hardware_name : m2
+Deleting previous duplicate entry for hardware_name : m3
+Deleting previous duplicate entry for hardware_name : m4
+Deleting previous duplicate entry for hardware_name : k1
+Deleting previous duplicate entry for hardware_name : k2
+Deleting previous duplicate entry for hardware_name : k3
+Deleting previous duplicate entry for hardware_name : calvin
+Deleting previous duplicate entry for hardware_name : hobbes
+Deleting previous duplicate entry for hardware_name : dora
+Success!! Added 10 new configurations to the collection : machine_collection
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  config --hardware hdwr-conf
+
+
+
+
+####################################################################
+
+
+Command: aggiestack  show images
+
+
+image_name : linux-ubuntu
+image_size : 128
+path : /images/linux-ubuntu-v1.0.img
+
+
+Status : SUCCESS
+image_name : linux-sles
+image_size : 512
+path : /images/old-image.img
+
+
+Status : SUCCESS
+image_name : linux-ubuntu-16
+image_size : 2048
+path : /images/linux-ubuntu-16.img
+
+
+Status : SUCCESS
