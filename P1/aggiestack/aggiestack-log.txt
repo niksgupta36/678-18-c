@@ -60,6 +60,220 @@ Status : SUCCESS
 ####################################################################
 
 
+Command: aggiestack  show images
+
+
+
+
+####################################################################
+
+
+Command: aggiestack 
+
+
+
+
+####################################################################
+
+
+Command: aggiestack  server list
+
+
+instance_name: niks
+flavor_name: small
+image_name: linux
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubunt
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+instance_name: niks
+flavor_name: small
+image_name: linux-ubuntu
+
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin show instances
+
+
+machine_name: m1
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m1
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m1
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m1
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m2
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m2
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m2
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m2
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m3
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m3
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m3
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m3
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m4
+instance_name: niks
+
+Status : SUCCESS
+machine_name: m4
+instance_name: niks
+
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin evacuate r1
+
+
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated hardware status inserted into database
+Updated data inserted into database
+Updated data inserted into database
+Updated data inserted into database
+Updated data inserted into database
+
+
+####################################################################
+
+
+Command: aggiestack  admin evacuate r2
+
+
+Updated rack data inserted into database
+Updated hardware status inserted into database
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin evacuate r2
+
+
+Updated rack data inserted into database
+Updated hardware status inserted into database
+
+
+####################################################################
+
+
+Command: aggiestack  admin remove m1
+
+
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem m1
+
+
+Status : SUCCESS
+
+####################################################################
+
+
 Command: aggiestack  admin rem k1
 
 
