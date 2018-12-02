@@ -55,3 +55,63 @@ Command: aggiestack  admin rem k1
 
 Machine deleted : k1
 Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem k1
+
+
+Machine deleted : k1
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem k2
+
+
+Machine deleted : k2
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem k2
+
+
+Machine deleted : k2
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem k2
+
+
+Machine deleted : k2
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem k4
+
+
+Machine deleted : k4
+Status : SUCCESS
+
+
+####################################################################
+
+
+Command: aggiestack  admin rem k3
+
+
+Machine deleted : k3
+Status : SUCCESS

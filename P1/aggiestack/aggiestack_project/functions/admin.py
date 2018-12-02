@@ -64,6 +64,7 @@ class Admin(Base):
                 for instance in instancelist:
                     if instance['machine_name']==machine:
                         print("Machine cannot be removed as an instance is already hosted on it")
+                        logger('Machine cannot be removed as an instance is already hosted on it')
                         flag = 0;
                         break;
                 if flag == 1:

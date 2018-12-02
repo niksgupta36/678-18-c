@@ -277,8 +277,14 @@ def deleteHardware(collection_name,machine):
         db = db_connect.connectDatabase()
         collection = db[collection_name]
         logger.logger('Machine deleted : '+ machine)
-        print('Machine deleted : '+ machine)
-        collection.remove({"hardware_name": machine})
+        
+        res=collection.remove({"hardware_name": machine})
+        #print(res['n']);
+        if(1==res['n']):
+            print('Machine deleted : '+ machine)
+            
+        else:
+            print('Machine does not exist : '+ machine)     
     except Exception as e:
         print(e)
         logger.logger(e)
